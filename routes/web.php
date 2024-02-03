@@ -16,3 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 });
+
+/* Rotas para estilização e criação das views */
+Route::get('/nav', function () {
+    return view('nav');
+});
