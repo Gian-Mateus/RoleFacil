@@ -18,6 +18,4 @@ use App\Http\Controllers\HomeController;
 Route::get('/', [HomeController::class, 'index']);
 
 /* Rotas para estilização e criação das views */
-Route::get('/nav', function () {
-    return view('nav');
-});
+

@@ -8,9 +8,12 @@
     <title>Role Fácil</title>
 </head>
 <body>
-    <h1>Role Fácil</h1>
-
-    <button class="btn btn-success">Button</button>
+    <x-navbar/>
+        <main class="container">
+            <x-filters.offcanvas/>
+            conteúdo
+        </main>
+    <x-footer/>
 </body>
 </html>
 

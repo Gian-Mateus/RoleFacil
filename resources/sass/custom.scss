@@ -1,0 +1,62 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
+
+$custom-colors: (
+    "primary": $orange-500,
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/root";
+
+body{
+    min-height: 100vh;
+    background-image: url("../../assets/assets-svg/background-role-facil.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    main{
+        position: relative;
+
+        #collapse-settings{
+            position: absolute;
+            left: 0.75rem;
+            top: 0.75rem;
+        }
+    }
+}
+
+// NavBar
+.nav-item{
+    padding: 5px 12px;
+}
+
+// Offcanvas
+.distance-filter{
+    font-size: 0.9rem;
+    padding: 1rem 1.25rem;
+}
+#range-distance{
+    min-width: 100%;
+}
+
+.input-range{
+    width: 3rem;
+}
+
+// Footer
+footer{
+    ul{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 0;
+        li{
+            list-style: none;
+            padding: 0.55rem 1rem;
+        }
+    }
+}
