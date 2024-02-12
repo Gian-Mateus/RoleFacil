@@ -19,10 +19,5 @@ use App\Http\Controllers\LoginController;
 
 Route::get('/', [HomeController::class, 'index']);
 
-Route::get('/form', [FormController::class, 'index']);
-
-Route::view('/login', 'login.form')->name('login.form');
-Route::post('/auth', [LoginController::class, 'auth'])->name('login.auth');
-
 /* Rotas para estilização e criação das views */
 
