@@ -19,13 +19,12 @@ class LoginController extends Controller
         ], [
             'email.required' => 'O campo email é obrigatório!',
             'email.email' => 'O email não é válido!',
-            'email.required' => 'O campo senha é obrigatório!'
+            'password.required' => 'O campo senha é obrigatório!'
         ]);
  
         if (Auth::attempt($credentials)) {
-            $request->session()->regenerate();
- 
-            return redirect()->intended('nav');
+            $request->session()->regenerate(); 
+            return redirect()->intended('home');
         } else {
             return redirect()->back()->with('erro', 'Email ou senha inválida!');
         }
