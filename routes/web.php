@@ -2,8 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\FormController;
-use App\Http\Controllers\LoginController;
+use App\Http\Controllers\EventController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +17,8 @@ use App\Http\Controllers\LoginController;
 
 
 Route::get('/', [HomeController::class, 'index']);
+Route::get('/events/create', [EventController::class, 'create']);
+Route::post('/events', [EventController::class, 'store']);
 
 /* Rotas para estilização e criação das views */
 
