@@ -12,7 +12,8 @@ class EventController extends Controller
      */
     public function index()
     {
-        //
+        $events = Event::all();
+        return view('events', ['events' => $events]);
     }
 
     /**
@@ -42,7 +43,7 @@ class EventController extends Controller
 
         $event->save();
 
-        return redirect('/events');
+        return redirect('/');
     }
 
     /**
@@ -50,7 +51,11 @@ class EventController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $event = Event::findOrFail($id);
+
+
+
+        return view('events.show', ['event' => $event]);
     }
 
     /**
