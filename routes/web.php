@@ -19,7 +19,9 @@ use App\Http\Controllers\EventController;
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/events', [EventController::class, 'index']);
 Route::get('/events/create', [EventController::class, 'create']);
+Route::get('/events/edit/{id}', [EventController::class, 'edit']);
 Route::post('/events', [EventController::class, 'store']);
+Route::put('/events/update/{id}', [EventController::class, 'update']);
 Route::delete('/events/{id}', [EventController::class, 'destroy']);
 
 /* Rotas para estilização e criação das views */

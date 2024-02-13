@@ -8,11 +8,23 @@
     <title>Role Fácil</title>
 </head>
 <body>
-    @foreach($events as $event)
-        <h2>Título: {{ $event->event_title }}</h2> <br>
-        <h2>Descrição: {{ $event->event_description }}</h2> <br>
-        <h2>Local: {{ $event->event_local }}</h2> <br>
-    @endforeach
+    <a href="/events/create" class="btn btn-info">Criar novo Evento</a>
+   <br> 
+    <tbody>       
+        @foreach($events as $event)
+            <tr>
+                <td><a href="/events/{{ $event->event_id }}">{{ $event->event_title }}</a></td>
+                <td>
+                    <a href="/events/edit/{{ $event->event_id }}" class="btn btn-info">Editar</a>
+                    <form action="/events/{{ $event->event_id }}" method="POST">
+                        @csrf
+                        @method('DELETE');
+                        <button type="submit" class="btn btn-danger">Deletar</button>
+                    </form>
+                </td>
+            </tr>
+        @endforeach
+    </tbody>
 </body>
 </html>
 

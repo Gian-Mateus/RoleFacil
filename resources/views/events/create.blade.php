@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   @vite(['resources/sass/app.scss', 'resources/js/app.js'])
-  <title>Criação de Evento</title>
+  <title>Role Fácil</title>
 </head>
 <body>
   <h1>Crie seu Evento</h1>
   <form action="/events" method="POST">
     @csrf
-    <input type="hidden" name="client_id" value="2">
+    <input type="hidden" name="client_id" value="1">
 
     <label for="titulo">Título do Evento:</label>
     <input type="text" id="titulo" name="title" required>

@@ -22,4 +22,6 @@ class Event extends Model
         'event_date_sale_ticket',
     ];
 
+    protected $guarded = [];
+
 }

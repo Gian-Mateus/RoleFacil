@@ -43,7 +43,7 @@ class EventController extends Controller
 
         $event->save();
 
-        return redirect('/');
+        return redirect('/events')->with('msg', 'Evento criado com sucesso!');
     }
 
     /**
@@ -52,9 +52,6 @@ class EventController extends Controller
     public function show(string $id)
     {
         $event = Event::findOrFail($id);
-
-
-
         return view('events.show', ['event' => $event]);
     }
 
@@ -63,7 +60,8 @@ class EventController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $event = Event::where('event_id', '=', $id)->first();
+        return view('events.edit', ['event' => $event]);
     }
 
     /**
@@ -71,7 +69,9 @@ class EventController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $data = request()->except(['_token', '_method']);
+        Event::where('event_id', '=', $id)->update($data);
+        return redirect('/events')->with('msg', 'Evento editado com sucesso!');
     }
 
     /**
@@ -79,6 +79,7 @@ class EventController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        Event::where('event_id', '=', $id)->delete();
+        return redirect('/events')->with('msg', 'Evento excluído com sucesso!');
     }
 }
