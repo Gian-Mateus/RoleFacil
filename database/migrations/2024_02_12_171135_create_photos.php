@@ -17,6 +17,7 @@ return new class extends Migration
             $table->foreign('client_id')->references('client_id')->on('clients')->onDelete('cascade')->onUpdate('cascade');
             $table->string('photo_url', 255);
             $table->text('photo_description');
+            $table->timestamps();
         });
     }
 

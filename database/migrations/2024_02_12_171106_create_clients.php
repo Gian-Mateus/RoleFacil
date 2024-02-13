@@ -25,6 +25,7 @@ return new class extends Migration
             $table->string('client_city', 100);
             $table->string('client_neighborhood', 100);
             $table->string('client_uf', 2);
+            $table->timestamps();
         });
     }
 

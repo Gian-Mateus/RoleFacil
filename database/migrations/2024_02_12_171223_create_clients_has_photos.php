@@ -17,6 +17,7 @@ return new class extends Migration
             $table->unsignedBigInteger('photo_id');
             $table->foreign('photo_id')->references('photo_id')->on('photos')->onDelete('cascade')->onUpdate('cascade');
             $table->string('client_has_photos_photo_url', 255);
+            $table->timestamps();
         });
     }
 

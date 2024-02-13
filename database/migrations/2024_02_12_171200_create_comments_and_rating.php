@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('comments_and_rating_author', 255);
             $table->text('comments_and_rating_comment');
             $table->integer('comments_and_rating_rating');
-
+            $table->timestamps();
         });
     }
 

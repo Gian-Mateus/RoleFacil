@@ -20,9 +20,10 @@ return new class extends Migration
             $table->string('event_local', 255);
             $table->date('event_date');
             $table->time('event_hour');
-            $table->integer('event_classification');
-            $table->string('event_social_media_link', 255);
-            $table->date('event_date_sale_ticket');
+            $table->integer('event_classification')->nullable();
+            $table->string('event_social_media_link', 255)->nullable();
+            $table->date('event_date_sale_ticket')->nullable();
+            $table->timestamps();
         });
     }
 
