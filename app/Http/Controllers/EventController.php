@@ -20,7 +20,7 @@ class EventController extends Controller
      */
     public function create()
     {
-        //
+        return view('events.create');
     }
 
     /**
@@ -31,6 +31,7 @@ class EventController extends Controller
         $event = new Event;
 
         $event->event_title = $request->title;
+        $event->client_id = $request->client_id;
         $event->event_description = $request->description;
         $event->event_local = $request->local;
         $event->event_date = $request->date;
@@ -41,7 +42,7 @@ class EventController extends Controller
 
         $event->save();
 
-        return redirect('/');
+        return redirect('/events');
     }
 
     /**
