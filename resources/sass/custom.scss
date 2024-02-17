@@ -13,6 +13,11 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 @import "bootstrap/scss/mixins";
 @import "bootstrap/scss/root";
 
+@import "card.scss";
+@import "footer.scss";
+@import "establishment.scss";
+@import "breadcrumb.scss";
+
 body{
     min-height: 100vh;
     background-image: url("../../assets/assets-svg/background-role-facil.svg");
@@ -27,6 +32,7 @@ body{
             left: 0.75rem;
             top: 0.75rem;
         }
+
     }
 }
 
@@ -46,17 +52,4 @@ body{
 
 .input-range{
     width: 3rem;
-}
-
-// Footer
-footer{
-    ul{
-        display: flex;
-        justify-content: center;
-        margin-bottom: 0;
-        li{
-            list-style: none;
-            padding: 0.55rem 1rem;
-        }
-    }
 }

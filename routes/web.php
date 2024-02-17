@@ -26,3 +26,6 @@ Route::delete('/events/{id}', [EventController::class, 'destroy']);
 
 /* Rotas para estilização e criação das views */
 
+Route::get('/estabelecimento', function () {
+    return view("establishment");
+});

@@ -1,12 +1,12 @@
 <?php
 
-namespace App\View\Components\filters;
+namespace App\View\Components;
 
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class button-offcanvas extends Component
+class breadcumb extends Component
 {
     /**
      * Create a new component instance.
@@ -21,6 +21,6 @@ class button-offcanvas extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.filters.button-offcanvas');
+        return view('components.breadcrumb');
     }
 }

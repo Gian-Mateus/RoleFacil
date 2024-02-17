@@ -9,11 +9,14 @@
 </head>
 <body>
     <x-navbar/>
+    @if (Request::is('/'))
+        <x-filters.offcanvas/>
+    @endif
+
         <main class="container">
-            <x-filters.offcanvas/>
-            conteúdo
+                @yield('content')
+                
         </main>
     <x-footer/>
 </body>
 </html>
-
