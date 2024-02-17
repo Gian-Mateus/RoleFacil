@@ -1,4 +1,4 @@
-<footer class="container-fluid bg-primary fixed-bottom">
+<footer class="container-fluid bg-primary">
     <div class="row">
         <div class="col">
             <ul>

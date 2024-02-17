@@ -29,3 +29,6 @@ Route::delete('/events/{id}', [EventController::class, 'destroy']);
 Route::get('/estabelecimento', function () {
     return view("establishment");
 });
+Route::get('/estabelecimentos', function () {
+    return view("list-establishment");
+});

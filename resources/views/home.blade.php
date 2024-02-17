@@ -10,13 +10,19 @@
 <body>
     <x-navbar/>
     @if (Request::is('/'))
-        <x-filters.offcanvas/>
+    <button class="btn btn-primary ms-2 mt-2 border" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasFilters"
+        aria-controls="offcanvasFilters" id="collapse-settings">
+        <x-svg.settings/>
+    </button>
     @endif
+    
+    <main class="container">
+        @if (Request::is('/'))
+        <x-filters.offcanvas/>
+        @endif
+        @yield('content')
+    </main>
 
-        <main class="container">
-                @yield('content')
-                
-        </main>
     <x-footer/>
 </body>
 </html>

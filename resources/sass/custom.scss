@@ -22,10 +22,16 @@ body{
     min-height: 100vh;
     background-image: url("../../assets/assets-svg/background-role-facil.svg");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+
+    #collapse-settings{
+        width: 4rem;
+    }
 
     main{
-        position: relative;
+        flex: 1;
 
         #collapse-settings{
             position: absolute;
