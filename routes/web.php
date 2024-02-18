@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\PainelAdmController;
+use App\Models\PainelAdm;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,6 +31,11 @@ Route::delete('/events/{id}', [EventController::class, 'destroy']);
 Route::get('/estabelecimento', function () {
     return view("establishment");
 });
+
 Route::get('/estabelecimentos', function () {
     return view("list-establishment");
 });
+
+/* Rota para painel admnistrativo */
+
+Route::resource('admin/paineladm', PainelAdmController::class);
