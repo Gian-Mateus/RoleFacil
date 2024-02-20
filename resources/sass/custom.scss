@@ -4,15 +4,27 @@
 
 $custom-colors: (
     "primary": $orange-500,
+    "secondary": $gray-900,
 );
 
 $theme-colors: map-merge($theme-colors, $custom-colors);
 
+$body-bg: $gray-900;
+$body-color: $white;
+
+// Custom Accordion colors
+$accordion-button-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$body-color}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+$accordion-button-active-icon:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$body-color}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+$accordion-bg: $gray-800;
+$accordion-button-active-bg: $gray-700;
+$accordion-button-active-color: $white;
+$accordion-button-focus-box-shadow: 0 0 0 0.25rem #bab8b640;
 
 @import "bootstrap/scss/maps";
 @import "bootstrap/scss/mixins";
 @import "bootstrap/scss/root";
 
+// Import custom parts
 @import "card.scss";
 @import "footer.scss";
 @import "establishment.scss";
@@ -22,7 +34,7 @@ body{
     min-height: 100vh;
     background-image: url("../../assets/assets-svg/background-role-facil.svg");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     display: flex;
     flex-direction: column;
 
