@@ -24,11 +24,9 @@ $accordion-button-focus-box-shadow: 0 0 0 0.25rem #bab8b640;
 @import "bootstrap/scss/mixins";
 @import "bootstrap/scss/root";
 
-<<<<<<< HEAD
 
-=======
 // Import custom parts
->>>>>>> fe4318bfb8df4447d4185f5390064e42df4e404b
+
 @import "card.scss";
 @import "footer.scss";
 @import "establishment.scss";
@@ -41,11 +39,7 @@ body{
     min-height: 100vh;
     background-image: url("../../assets/assets-svg/background-role-facil.svg");
     background-repeat: no-repeat;
-<<<<<<< HEAD
-    background-size: 100%;
-=======
     background-size: cover;
->>>>>>> fe4318bfb8df4447d4185f5390064e42df4e404b
     display: flex;
     flex-direction: column;
 
