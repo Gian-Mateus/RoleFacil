@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CadastroController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\EventController;
@@ -38,4 +39,17 @@ Route::get('/estabelecimentos', function () {
 
 /* Rota para painel admnistrativo */
 
+
 Route::resource('admin/paineladm', PainelAdmController::class);
+
+Route::get('/login/cadastro', [CadastroController::class, 'index']);
+
+Route::get('/login/cadastro', [CadastroController::class, 'create']);
+
+Route::post('/login/cadastro', [CadastroController::class, 'store'])->name('login.cadastro');
+
+//Route::resource('/login/cadastro', CadastroController::class);
+
+Route::get('/login', function () {
+    return view("login.login");
+});

@@ -13,16 +13,20 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 @import "bootstrap/scss/mixins";
 @import "bootstrap/scss/root";
 
+
 @import "card.scss";
 @import "footer.scss";
 @import "establishment.scss";
 @import "breadcrumb.scss";
+@import 'cadastro';
+@import 'login';
+
 
 body{
     min-height: 100vh;
     background-image: url("../../assets/assets-svg/background-role-facil.svg");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 100%;
     display: flex;
     flex-direction: column;
 

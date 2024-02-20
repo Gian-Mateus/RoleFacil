@@ -15,7 +15,7 @@
         <x-svg.settings/>
     </button>
     @endif
-    
+
     <main class="container">
         @if (Request::is('/'))
         <x-filters.offcanvas/>

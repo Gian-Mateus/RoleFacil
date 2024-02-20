@@ -13,16 +13,15 @@ return new class extends Migration
     {
         Schema::create('cadastros', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('cep');
-            $table->string('street');
-            $table->string('number');
-            $table->string('city');
-            $table->string('state');
-            $table->string('cnpj');
-            $table->string('email');
-            $table->string('password');
-            $table->timestamp('date');
+            $table->text('name');
+            $table->text('cep');
+            $table->text('street');
+            $table->text('number');
+            $table->text('city');
+            $table->text('state');
+            $table->text('cnpj');
+            $table->text('email');
+            $table->text('password');
             $table->timestamps();
         });
     }

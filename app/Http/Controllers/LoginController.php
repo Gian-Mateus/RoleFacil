@@ -2,17 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Cadastro;
 use Illuminate\Http\Request;
 
-class CadastroController extends Controller
+class LoginController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('/login/cadastro');
+        //
     }
 
     /**
@@ -20,7 +19,7 @@ class CadastroController extends Controller
      */
     public function create()
     {
-        return view('/login/cadastro');
+        //
     }
 
     /**
@@ -28,20 +27,7 @@ class CadastroController extends Controller
      */
     public function store(Request $request)
     {
-        $cadastro = new Cadastro;
-
-        $cadastro->name = $request->name;
-        $cadastro->cep = $request->cep;
-        $cadastro->street = $request->street;
-        $cadastro->number = $request->number;
-        $cadastro->city = $request->city;
-        $cadastro->state = $request->state;
-        $cadastro->cnpj = $request->cnpj;
-        $cadastro->email = $request->email;
-        $cadastro->password = $request->password;
-
-        $cadastro->save();
-        return redirect('login')->with('success', 'Registro inserido com sucxesso');
+        //
     }
 
     /**

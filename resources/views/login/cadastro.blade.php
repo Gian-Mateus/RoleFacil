@@ -21,40 +21,40 @@
                                 @csrf
                                 <div class="col-md-9">
                                   <label for="name" class="form-label">Nome</label>
-                                  <input type="text" class="form-control" id="name" autofocus required>
+                                  <input type="text" class="form-control" name="name" id="name" autofocus required>
                                 </div>
                                 <div class="col-md-3">
                                     <label for="cep" class="form-label">CEP</label>
-                                    <input type="text" class="form-control" id="cep" required>
+                                    <input type="text" class="form-control" name="cep" id="cep" required>
                                   </div>
 
                                 <div class="col-md-8">
                                   <label for="street" class="form-label">Rua</label>
-                                  <input type="text" class="form-control" id="street" required>
+                                  <input type="text" class="form-control" name="street" id="street" required>
                                 </div>
                                 <div class="col-md-4">
                                   <label for="number" class="form-label">Número</label>
-                                  <input type="text" class="form-control" id="number" required>
+                                  <input type="text" class="form-control" name="number" id="number" required>
                                 </div>
                                 <div class="col-md-6">
                                   <label for="city" class="form-label">Cidade</label>
-                                  <input type="text" class="form-control" id="city" required>
+                                  <input type="text" class="form-control" name="city" id="city" required>
                                 </div>
                                 <div class="col-md-6">
                                   <label for="state" class="form-label">Estado</label>
-                                  <x-estado />
+                                  <x-states/>
                                 </div>
                                 <div class="col-md-12">
                                   <label for="cnpj" class="form-label">CNPJ</label>
-                                  <input type="text" class="form-control" id="cnpj">
+                                  <input type="text" class="form-control" name="cnpj" id="cnpj">
                                 </div>
                                 <div class="col-md-6">
                                     <label for="email" class="form-label">E-mail</label>
-                                    <input type="email" class="form-control" id="email" required>
+                                    <input type="email" class="form-control" name="email" id="email" required>
                                   </div>
                                   <div class="col-md-6">
                                     <label for="password" class="form-label">Senha</label>
-                                    <input type="password" class="form-control" id="password" required>
+                                    <input type="password" class="form-control" name="password" id="password" required>
                                   </div>
                                 <div class="col-12">
                                   <button type="submit" class="btn btn-primary">Cadastrar</button>
