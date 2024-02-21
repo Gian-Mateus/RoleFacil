@@ -58,11 +58,16 @@ body{
         
         main{
             flex: 1;
+            position: relative;
             
+            .event-list-cards{
+                margin-top: 4rem;
+            }
+
             #collapse-settings{
                 position: absolute;
-                left: 0.75rem;
-                top: 0.75rem;
+                left: 0;
+                top: 0;
             }
 
         }

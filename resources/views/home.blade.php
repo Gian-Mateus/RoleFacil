@@ -9,19 +9,27 @@
 </head>
 <body>
     <x-navbar/>
-    @if (Request::is('/'))
-    <button class="btn btn-primary ms-2 mt-2 border" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasFilters"
-        aria-controls="offcanvasFilters" id="collapse-settings">
-        <x-svg.settings/>
-    </button>
-    @endif
-
+    
     <main class="container">
-        @if (Request::is('/'))
+        <button class="btn btn-primary ms-2 mt-2 border" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasFilters"
+            aria-controls="offcanvasFilters" id="collapse-settings">
+            <x-svg.settings/>
+        </button>
+    
         <x-filters.offcanvas/>
-        @endif
-        
-        @yield('content')
+
+        <div class="ad-carousel">
+            <x-carousel idCarousel="carouselHome" classCarousel="carousel-home"/>
+        </div>
+
+        <div class="event-list-cards">
+            <x-eventListCard aboutWhat="Eventos"/>
+            <x-eventListCard aboutWhat="Pertos de você"/>
+            <x-eventListCard aboutWhat="Restaurantes"/>
+            <x-eventListCard aboutWhat="Pubs"/>
+            <x-eventListCard aboutWhat="Bar"/>
+        </div>
+
     </main>
 
     <x-footer/>
