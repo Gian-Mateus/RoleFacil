@@ -4,8 +4,10 @@ use App\Http\Controllers\CadastroController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PainelAdmController;
 use App\Models\PainelAdm;
+use Illuminate\Auth\Events\Login;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,6 +52,4 @@ Route::post('/login/cadastro', [CadastroController::class, 'store'])->name('logi
 
 //Route::resource('/login/cadastro', CadastroController::class);
 
-Route::get('/login', function () {
-    return view("login.login");
-});
+Route::get('/login/login', [LoginController::class, 'index'])->name('login.login');
