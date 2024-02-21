@@ -20,7 +20,7 @@ return new class extends Migration
             $table->text('user_description')->nullable();
             $table->string('user_zipcode', 8);
             $table->string('user_complement', 100);
-            $table->string('user_adress', 100);
+            $table->string('user_address', 100);
             $table->string('user_number_address', 20);
             $table->string('user_city', 50);
             $table->string('user_neighborhood', 50);
