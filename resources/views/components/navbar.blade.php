@@ -20,27 +20,27 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">
-                        <h4>HOME</h4>
+                        <h4>Home</h4>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">
-                        <h4>ROLÊS</h4>
+                        <h4>Rolês</h4>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">
-                        <h4>FREELANCE</h4>
+                        <h4>Freelancer</h4>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">
-                        <h4>CONTATO</h4>
+                        <h4>Contato</h4>
                     </a>
                 </li>
                 <li class="nav-item">
                 <a class="nav-link" href="login/cadastro">
-                    <h4>LOGIN</h4>
+                    <h4>Login</h4>
                 </a>
                 </li>
             </ul>
