@@ -20,27 +20,42 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">
-                        <h4>HOME</h4>
+                        <div class="icone-home">
+                        <x-svg.home/>
+                        </div>
+                        <h4>Home</h4>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">
-                        <h4>ROLÊS</h4>
+                        <div class="icone-roles">
+                            <x-svg.roles/>
+                        </div>
+                        <h4>Rolês</h4>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">
-                        <h4>FREELANCE</h4>
+                        <div class="icone-freelancer">
+                            <x-svg.freelancer/>
+                        </div>
+                        <h4>Freelancer</h4>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">
-                        <h4>CONTATO</h4>
+                        <div class="icone-contato">
+                            <x-svg.contact/>
+                        </div>
+                        <h4>Contato</h4>
                     </a>
                 </li>
                 <li class="nav-item">
                 <a class="nav-link" href="login/cadastro">
-                    <h4>LOGIN</h4>
+                    <div class="icone-login">
+                        <x-svg.login/>
+                    </div>
+                    <h4>Login</h4>
                 </a>
                 </li>
             </ul>

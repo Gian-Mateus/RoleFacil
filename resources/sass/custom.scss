@@ -45,13 +45,22 @@ $accordion-button-active-color: $white;
 @import "bootstrap/scss/root";
 
 body{
-        min-height: 100vh;
-        background-image: url("../../assets/assets-svg/background-role-facil.svg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        display: flex;
-        flex-direction: column;
-        
+    min-height: 100vh;
+    background-image: url("../../assets/assets-svg/background-role-facil.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    background-attachment: fixed;
+}
+
+    #collapse-settings{
+        width: 4rem;
+    }
+
+    main{
+        flex: 1;
+
         #collapse-settings{
             width: 4rem;
         }
@@ -73,11 +82,6 @@ body{
         }
 }
 
-// NavBar
-.nav-item{
-    padding: 5px 12px;
-}
-    
 // Offcanvas
 .distance-filter{
     font-size: 0.9rem;
@@ -102,6 +106,21 @@ body{
 }
 .nav-item h4{
     color: white;
+}
+.icone-home{
+    margin-left: 0.9rem;
+}
+.icone-contato{
+    margin-left: 1.3rem;
+}
+.icone-freelancer{
+    margin-left: 2rem;
+}
+.icone-roles{
+    margin-left: 0.6rem;
+}
+.icone-login{
+    margin-left: 0.6rem;
 }
 .busca{
     min-width: 30vw;
