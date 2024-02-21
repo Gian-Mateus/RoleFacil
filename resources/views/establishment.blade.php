@@ -7,7 +7,11 @@
         </div>
         <div class="ctg-ht">
             <h5 class="pt-1">Categoria</h5>
-            <span class="mb-2"><x-svg.star-hating/></span>
+            <span class="mb-2">
+                @for ( $k = 0; $k < 5; $k++ )
+                    <x-svg.star-hating/>
+                @endfor
+            </span>
         </div>
         <div id="carouselGalery" class="carousel slide">
             <div class="carousel-indicators">
