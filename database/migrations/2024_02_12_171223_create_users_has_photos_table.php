@@ -11,12 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('clients_has_photos', function (Blueprint $table) {
-            $table->unsignedBigInteger('client_id');
-            $table->foreign('client_id')->references('client_id')->on('clients')->onDelete('cascade')->onUpdate('cascade');
+        Schema::create('users_has_photos', function (Blueprint $table) {
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('user_id')->on('users')->onDelete('cascade')->onUpdate('cascade');            $table->string('event_title', 255);
             $table->unsignedBigInteger('photo_id');
             $table->foreign('photo_id')->references('photo_id')->on('photos')->onDelete('cascade')->onUpdate('cascade');
-            $table->string('client_has_photos_photo_url', 255);
+            $table->string('users_has_photos_photo_url', 255);
             $table->timestamps();
         });
     }
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('clients_has_photos');
+        Schema::dropIfExists('users_has_photos');
     }
 };

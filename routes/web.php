@@ -1,11 +1,13 @@
 <?php
 
-use App\Http\Controllers\CadastroController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\PainelAdmController;
 use App\Models\PainelAdm;
+use Illuminate\Auth\Events\Login;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,17 +41,11 @@ Route::get('/estabelecimentos', function () {
 
 /* Rota para painel admnistrativo */
 
-
 Route::resource('admin/paineladm', PainelAdmController::class);
 
-Route::get('/login/cadastro', [CadastroController::class, 'index']);
+/* Rota para login e registro */
 
-Route::get('/login/cadastro', [CadastroController::class, 'create']);
-
-Route::post('/login/cadastro', [CadastroController::class, 'store'])->name('login.cadastro');
-
-//Route::resource('/login/cadastro', CadastroController::class);
-
-Route::get('/login', function () {
-    return view("login.login");
-});
+Route::get('/login/register', [RegisterController::class, 'create']);
+Route::post('/login/register', [RegisterController::class, 'store'])->name('login.register');
+Route::get('/login/logar', [LoginController::class, 'index']);
+Route::post('/login/logar', [LoginController::class, 'store'])->name('login.logar');

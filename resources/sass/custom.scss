@@ -66,23 +66,52 @@ body{
             }
 
         }
-    }
-    
-    // NavBar
-    .nav-item{
-        padding: 5px 12px;
-    }
-    
-    // Offcanvas
-    .distance-filter{
-        font-size: 0.9rem;
-        padding: 1rem 1.25rem;
-    }
-    #range-distance{
-        min-width: 100%;
-    }
+}
 
-    .input-range{
-        width: 3rem;
-    }
+// NavBar
+.nav-item{
+    padding: 5px 12px;
+}
     
+// Offcanvas
+.distance-filter{
+    font-size: 0.9rem;
+    padding: 1rem 1.25rem;
+}
+#range-distance{
+    min-width: 100%;
+}
+
+.input-range{
+    width: 3rem;
+}
+
+// NavBar
+.navbar{
+    margin-top: -2%;
+    margin-left: 8%;
+}
+.nav-item{
+    padding: 5px 12px;
+    margin-left: 1rem;
+}
+.nav-item h4{
+    color: white;
+}
+.busca{
+    min-width: 30vw;
+    margin: 0 4rem;
+}
+// Offcanvas
+.distance-filter{
+    font-size: 0.9rem;
+    padding: 1rem 1.25rem;
+}
+#range-distance{
+    min-width: 100%;
+}
+
+.input-range{
+    width: 3rem;
+}
+
