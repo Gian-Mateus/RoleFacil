@@ -65,10 +65,21 @@ body{
 }
 
 // NavBar
+.navbar{
+    margin-top: -2%;
+    margin-left: 8%;
+}
 .nav-item{
     padding: 5px 12px;
+    margin-left: 1rem;
 }
-
+.nav-item h4{
+    color: white;
+}
+.busca{
+    min-width: 30vw;
+    margin: 0 4rem;
+}
 // Offcanvas
 .distance-filter{
     font-size: 0.9rem;
