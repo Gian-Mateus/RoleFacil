@@ -1,10 +1,9 @@
-
-<nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-xl">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
             <x-svg.logo width="6rem" height="6rem"/>
         </a>
-        <form class="d-flex busca" role="search">
+        <form class="d-flex form-search" role="search">
             <div class="input-group">
                 <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
                 <button class="input-group-text" type="submit">
@@ -20,7 +19,7 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">
-                        <div class="icone-home">
+                        <div class="icon">
                         <x-svg.home/>
                         </div>
                         <h4>Home</h4>
@@ -28,7 +27,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">
-                        <div class="icone-roles">
+                        <div class="icon">
                             <x-svg.roles/>
                         </div>
                         <h4>Rolês</h4>
@@ -36,7 +35,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">
-                        <div class="icone-freelancer">
+                        <div class="icon">
                             <x-svg.freelancer/>
                         </div>
                         <h4>Freelancer</h4>
@@ -44,7 +43,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        <div class="icone-contato">
+                        <div class="icon">
                             <x-svg.contact/>
                         </div>
                         <h4>Contato</h4>
@@ -52,7 +51,7 @@
                 </li>
                 <li class="nav-item">
                 <a class="nav-link" href="login/cadastro">
-                    <div class="icone-login">
+                    <div class="icon">
                         <x-svg.login/>
                     </div>
                     <h4>Login</h4>

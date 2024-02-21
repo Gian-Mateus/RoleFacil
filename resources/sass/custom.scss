@@ -28,6 +28,10 @@ $accordion-button-focus-box-shadow: 0 0 0 0.25rem $orange-600;
 $accordion-button-active-bg: $gray-600;
 $accordion-button-active-color: $white;
 
+$navbar-light-color: $white;
+$navbar-light-active-color: $white;
+$navbar-light-hover-color: $orange-500;
+
 // Custom Offcanvas color
 .btn-close {
     filter: var(--bs-btn-close-white-filter);
@@ -57,30 +61,24 @@ body{
     #collapse-settings{
         width: 4rem;
     }
-
     main{
         flex: 1;
-
-        #collapse-settings{
-            width: 4rem;
-        }
-        
-        main{
-            flex: 1;
-            position: relative;
+        position: relative;
             
-            .event-list-cards{
-                margin-top: 4rem;
-            }
-
-            #collapse-settings{
-                position: absolute;
-                left: 0;
-                top: 0;
-            }
-
+        .event-list-cards{
+            margin-top: 4rem;
         }
-}
+        .carousel{
+            position: relative;
+            margin-top: 4rem;
+        }
+        #collapse-settings{
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+
 
 // Offcanvas
 .distance-filter{
@@ -96,36 +94,22 @@ body{
 }
 
 // NavBar
-.navbar{
-    margin-top: -2%;
-    margin-left: 8%;
-}
 .nav-item{
-    padding: 5px 12px;
+    text-align: center;
+}
+.icon{
+    margin-bottom: 0.5rem;
+}
+
+.form-search{
+    width: 70%;
+}
+
+.navbar-nav{
+    column-gap: 0.75rem;
     margin-left: 1rem;
 }
-.nav-item h4{
-    color: white;
-}
-.icone-home{
-    margin-left: 0.9rem;
-}
-.icone-contato{
-    margin-left: 1.3rem;
-}
-.icone-freelancer{
-    margin-left: 2rem;
-}
-.icone-roles{
-    margin-left: 0.6rem;
-}
-.icone-login{
-    margin-left: 0.6rem;
-}
-.busca{
-    min-width: 30vw;
-    margin: 0 4rem;
-}
+
 // Offcanvas
 .distance-filter{
     font-size: 0.9rem;
