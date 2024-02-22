@@ -5,8 +5,8 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\admin\LoginController;
 use App\Http\Controllers\RegisterController;
-use App\Http\Controllers\PainelAdmController;
-use App\Models\PainelAdm;
+use App\Http\Controllers\PainelAdministradorController;
+use App\Http\Controllers\FreelancerController;
 use Illuminate\Auth\Events\Login;
 
 /* Rotas para login e registro */
@@ -20,6 +20,10 @@ Route::get("/logout", [LoginController::class, "logout"]);
 /* Rotas para home */
 
 Route::get('/', [HomeController::class, 'index']);
+
+/* Rotas para freelancer */
+
+Route::get('/freelancer', [FreelancerController::class, 'index']);
 
 /* Middleware para proteção de rotas (Só poderá acessar se estiver logado) */
 Route::middleware("validaLogin")->group(function(){
@@ -48,4 +52,4 @@ Route::get('/estabelecimentos', function () {
 
 /* Rotas para painel admnistrativo */
 
-Route::resource('admin/paineladm', PainelAdmController::class);
+Route::get('admin/painel', [PainelAdministradorController::class, 'index'])->name('admin.painel');;
