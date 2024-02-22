@@ -1,0 +1,25 @@
+// Offcanvas
+.distance-filter{
+    font-size: 0.9rem;
+    padding: 1rem 1.25rem;
+}
+#range-distance{
+    min-width: 100%;
+}
+
+.input-range{
+    width: 3rem;
+}
+
+
+@media screen and (min-width: 768px){
+    #collapse-settings{
+        visibility: hidden;
+    }
+}
+#collapse-settings{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4rem;
+}

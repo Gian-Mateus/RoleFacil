@@ -12,7 +12,7 @@ class RegisterController extends Controller
      */
     public function create()
     {
-        return view('/login/register');
+        return view('/admin/login/register');
     }
 
     /**
@@ -22,8 +22,8 @@ class RegisterController extends Controller
     {
         $user = new User;
 
-        $user->user_email = $request->email;
-        $user->user_password = password_hash($request->password, PASSWORD_DEFAULT);
+        $user->email = $request->email;
+        $user->password = bcrypt($request->password);
         $user->user_name = $request->name;
         $user->user_cnpj = $request->cnpj;
         $user->user_description = $request->description;
@@ -42,6 +42,6 @@ class RegisterController extends Controller
         $user->user_ddd_telefone_fixo = $request->ddd_telefone_fixo;
 
         $user->save();
-        return redirect('login/logar')->with('success', 'Registro inserido com sucesso');
+        return redirect('login')->with('success', 'Usuário registrado com sucesso!');
     }
 }

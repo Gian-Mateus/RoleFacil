@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('users_has_photos', function (Blueprint $table) {
-            $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('user_id')->on('users')->onDelete('cascade')->onUpdate('cascade');            $table->string('event_title', 255);
+            $table->unsignedBigInteger('id');
+            $table->foreign('id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
             $table->unsignedBigInteger('photo_id');
             $table->foreign('photo_id')->references('photo_id')->on('photos')->onDelete('cascade')->onUpdate('cascade');
             $table->string('users_has_photos_photo_url', 255);

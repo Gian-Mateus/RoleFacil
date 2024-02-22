@@ -14,8 +14,21 @@ class UserSeeder extends Seeder
     public function run(): void
     {
         User::create([
-            'user_email' => 'teste@teste.com',
-            'user_password' => 'teste',
+            'email' => 'teste@teste.com',
+            'password' => bcrypt('teste'),
+            'user_name' => 'Bernardo Teste',
+            'user_cnpj' => '12341234000154',
+            'user_zipcode' => '89120000',
+            'user_complement' => 'Casa',
+            'user_address' => 'Sibipiruna',
+            'user_number_address' => '218',
+            'user_city' => 'Timbó',
+            'user_neighborhood' => 'Padre Martinho Stein',
+            'user_uf' => 'SC',
+            'user_celular' => '992899948',
+            'user_ddd_celular' => '47',
+            'user_telefone_fixo' => '92899948',
+            'user_ddd_telefone_fixo' => '47'
         ]);
     }
 }
