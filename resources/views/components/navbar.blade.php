@@ -50,12 +50,18 @@
                     </a>
                 </li>
                 <li class="nav-item">
+<<<<<<< HEAD
+                    <a href="/admin/logout" class="dropdown-item">
+                        <x-svg.login/>
+                    </a>
+=======
                 <a class="nav-link" href="login/cadastro">
                     <div class="icon">
                         <x-svg.login/>
                     </div>
                     <h4>Login</h4>
                 </a>
+>>>>>>> 17e6e6cbba2174120e9ee40782943c71e82a8609
                 </li>
                 @if (Auth::user())
                 <li class="nav-item">
