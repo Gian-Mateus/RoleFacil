@@ -30,9 +30,9 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="login/cadastro">
-                    <x-svg.login/>
-                </a>
+                    <a href="/admin/logout" class="dropdown-item">
+                        <x-svg.login/>
+                    </a>
                 </li>
             </ul>
             <form class="d-flex" role="search">
