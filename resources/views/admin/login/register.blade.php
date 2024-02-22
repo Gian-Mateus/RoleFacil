@@ -13,7 +13,7 @@
             <div class="row justify-content-center align-items-center h-100">
                 <div class="container d-flex justify-content-center">
                     <a class="navbar-brand" href="#">
-                        <x-svg.logo width="8rem" height="8rem"/>
+                        <x-svg.logo width="10rem" height="10rem"/>
                     </a>
                 </div>
                 <div class="col col-sm-12 col-md-6">

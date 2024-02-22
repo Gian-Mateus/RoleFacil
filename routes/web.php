@@ -27,7 +27,7 @@ Route::get('/freelancer', [FreelancerController::class, 'index']);
 
 /* Middleware para proteção de rotas (Só poderá acessar se estiver logado) */
 Route::middleware("validaLogin")->group(function(){
-    
+
     /* Rotas para eventos */
 
     Route::get('/events/create', [EventController::class, 'create']);
@@ -35,7 +35,7 @@ Route::middleware("validaLogin")->group(function(){
     Route::post('/events', [EventController::class, 'store']);
     Route::put('/events/update/{id}', [EventController::class, 'update']);
     Route::delete('/events/{id}', [EventController::class, 'destroy']);
-    
+
 });
 
 Route::get('/events', [EventController::class, 'index']);
@@ -52,4 +52,20 @@ Route::get('/estabelecimentos', function () {
 
 /* Rotas para painel admnistrativo */
 
+
+Route::get('admin/painel-administrador', [PainelAdministradorController::class, 'index']);
+
+/* Rota para login e registro */
+
+Route::get('/login/register', [RegisterController::class, 'create']);
+Route::post('/login/register', [RegisterController::class, 'store'])->name('login.register');
+Route::get('/login/logar', [LoginController::class, 'index']);
+Route::post('/login/logar', [LoginController::class, 'store'])->name('login.logar');
+
+
+Route::get('/client', function () {
+    return view("admin.client");
+});
+
 Route::get('admin/painel', [PainelAdministradorController::class, 'index'])->name('admin.painel');;
+
