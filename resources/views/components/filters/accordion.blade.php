@@ -1,8 +1,13 @@
 <div class="accordion">
     <div class="accordion-item">
-        <h2 class="accordion-header">
+        <h2 class="accordion-header d-flex justify-content-between">
             <span class="distance-filter">
                 Distância
+            </span>
+            <span class="pt-2 pe-2">
+                <button type="button" class="btn btn-outline-primary">
+                    Filtrar
+                </button>
             </span>
         </h2>
         <div>

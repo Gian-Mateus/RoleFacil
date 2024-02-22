@@ -59,20 +59,25 @@ body{
     display: flex;
     flex-direction: column;
     background-attachment: fixed;
-}
-
-    #collapse-settings{
-        width: 4rem;
-    }
+    
     main{
         flex: 1;
         position: relative;
-            
+        
         .event-list-cards{
             margin-top: 4rem;
         }
         .carousel{
             position: relative;
-            margin-top: 4rem;
         }
     }
+}
+@media screen and (max-width: 768px){
+    .content-accordion{
+        width: 0 !important;
+        height: 4rem !important;
+        .accordion{
+            visibility: hidden;
+        }
+    }
+}

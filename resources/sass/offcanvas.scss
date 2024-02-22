@@ -14,11 +14,12 @@
 
 @media screen and (min-width: 768px){
     #collapse-settings{
-        visibility: none;
+        visibility: hidden;
     }
 }
 #collapse-settings{
     position: absolute;
     left: 0;
     top: 0;
+    width: 4rem;
 }

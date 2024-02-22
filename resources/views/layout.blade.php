@@ -10,7 +10,7 @@
 <body>
     <x-navbar/>
 
-    <main class="container">
+    <main class="container-md">
         
         @yield('content')
         
