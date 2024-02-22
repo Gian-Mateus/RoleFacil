@@ -21,10 +21,9 @@ use Illuminate\Auth\Events\Login;
 */
 
 /* Rota para home */
+Route::get('/', [HomeController::class, 'index']);
 Route::middleware("validaLogin")->group(function(){
-
-    Route::get('/', [HomeController::class, 'index']);
-
+    
     /* Rota para eventos */
 
     Route::get('/events/create', [EventController::class, 'create']);
