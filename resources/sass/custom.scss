@@ -99,6 +99,7 @@ body{
 }
 .nav-item{
     text-align: center;
+    
 }
 .navbar-collapse{
     flex-grow: 0 !important;
@@ -116,6 +117,7 @@ body{
 .navbar-nav{
     column-gap: 0.75rem;
     margin-left: 1rem;
+    flex-direction: row !important;
 }
 // Carousel home
 .content-carousel{
