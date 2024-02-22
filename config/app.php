@@ -168,6 +168,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        Riverskies\Laravel\MobileDetect\MobileDetectServiceProvider::class
     ])->toArray(),
 
     /*

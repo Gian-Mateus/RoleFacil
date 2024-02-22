@@ -1,9 +1,17 @@
-<nav class="navbar navbar-expand-lg bg-primary">
-    <div class="container-fluid">
+<nav class="navbar navbar-expand-xl">
+    <div class="container">
         <a class="navbar-brand" href="#">
-            <x-svg.logo width="4rem" height="4rem"/>
+            <x-svg.logo width="6rem" height="6rem"/>
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        <form class="d-flex form-search" role="search">
+            <div class="input-group">
+                <input class="form-control" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+                <button class="input-group-text" type="submit">
+                    <x-svg.search/>
+                </button>
+            </div>
+        </form>
+        <button class="navbar-toggler bg-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -11,38 +19,54 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">
+                        <div class="icon">
                         <x-svg.home/>
+                        </div>
+                        <h4>Home</h4>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">
-                        <x-svg.roles/>
+                        <div class="icon">
+                            <x-svg.roles/>
+                        </div>
+                        <h4>Rolês</h4>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">
-                        <x-svg.freelancer/>
+                        <div class="icon">
+                            <x-svg.freelancer/>
+                        </div>
+                        <h4>Freelancer</h4>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <x-svg.contact/>
+                    <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <div class="icon">
+                            <x-svg.contact/>
+                        </div>
+                        <h4>Contato</h4>
                     </a>
                 </li>
                 <li class="nav-item">
+<<<<<<< HEAD
                     <a href="/admin/logout" class="dropdown-item">
                         <x-svg.login/>
                     </a>
+=======
+                <a class="nav-link" href="login/cadastro">
+                    <div class="icon">
+                        <x-svg.login/>
+                    </div>
+                    <h4>Login</h4>
+                </a>
+>>>>>>> 17e6e6cbba2174120e9ee40782943c71e82a8609
                 </li>
             </ul>
-            <form class="d-flex" role="search">
-                <div class="input-group">
-                    <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
-                    <button class="input-group-text" type="submit">
-                        <x-svg.search/>
-                    </button>
-                </div>
-            </form>
+
         </div>
     </div>
 </nav>
+
+<x-filters.modalmsg/>

@@ -1,21 +1,19 @@
 <?php
 
-namespace App\View\Components;
+namespace App\View\Components\svg;
 
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class carousel extends Component
+class star-hating extends Component
 {
     /**
      * Create a new component instance.
      */
-    public function __construct(
-        public string $idCarousel
-    )
+    public function __construct()
     {
-        
+        //
     }
 
     /**
@@ -23,6 +21,6 @@ class carousel extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.carousel');
+        return view('components.svg.star-hating');
     }
 }

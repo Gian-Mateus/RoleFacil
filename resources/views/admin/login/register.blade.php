@@ -89,10 +89,13 @@
                                   <input type="text" class="form-control" name="telefone_fixo" id="telefone_fixo">
                                 </div>
                                 <div class="col-12 mb-3">
-                                  <button type="submit" class="btn btn-primary w-100 fs-5 fw-bold icon-link-hover">Rigistrar-se</button>
+                                  <button type="submit" class="btn btn-primary w-100 fs-5 fw-bold icon-link-hover">Registrar-se</button>
                                 </div>
                                 <div class="col-md-12 text-center">
-                                    <a class="link-light link-underline-opacity-0" href="{{route('login.logar')}}">Já tem uma conta? Faça o login clincando aqui!</a>
+                                  <a class="link-light link-underline-opacity-0" href="{{route('login.logar')}}">Já tem uma conta? Faça o login clincando aqui!</a>
+                                </div>
+                                <div class="col-md-12 text-end">
+                                  <x-filters.modal/>
                                 </div>
                               </form>
                         </div>
