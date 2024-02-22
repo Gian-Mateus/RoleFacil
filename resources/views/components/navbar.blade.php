@@ -49,26 +49,8 @@
                         <h4>Contato</h4>
                     </a>
                 </li>
-<<<<<<< HEAD
-                @if (Auth::user())
                 <li class="nav-item">
-                    <a href="/admin/logout" class="dropdown-item">
-                        <x-svg.login/>
-                    </a>
-                </li>
-                @endif
-                <li>
-                @if (!Auth::user())
-                <a class="nav-link" href="admin/login/">
-                    <div class="icon">
-                        <x-svg.login/>
-                    </div>
-                    <h4>Login</h4>
-                </a>
-                </li>
-=======
-                    <li class="nav-item">
-                    <a class="nav-link" href="login/cadastro">
+                    <a class="nav-link" href="login">
                         <div class="icon">
                             <x-svg.login/>
                         </div>
@@ -77,14 +59,13 @@
                 </li>
                 @if (Auth::user())
                 <li class="nav-item">
-                    <a class="nav-link" href="login/cadastro">
+                    <a class="nav-link" href="logout">
                         <div class="icon ps-1">
                             <x-svg.logout/>
                         </div>
                         <h4>Sair</h4>
                     </a>
                 </li>
->>>>>>> 76ef455c7f2db8003fd1e114c66ca508fb32a3ad
                 @endif
             </ul>
 

@@ -12,7 +12,7 @@ class RegisterController extends Controller
      */
     public function create()
     {
-        return view('/login/register');
+        return view('/admin/login/register');
     }
 
     /**

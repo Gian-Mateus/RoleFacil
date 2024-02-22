@@ -92,7 +92,7 @@
                                   <button type="submit" class="btn btn-primary w-100 fs-5 fw-bold icon-link-hover">Registrar-se</button>
                                 </div>
                                 <div class="col-md-12 text-center">
-                                  <a class="link-light link-underline-opacity-0" href="{{route('login.logar')}}">Já tem uma conta? Faça o login clincando aqui!</a>
+                                  <a class="link-light link-underline-opacity-0" href="{{route('login.form')}}">Já tem uma conta? Faça o login aqui!</a>
                                 </div>
                                 <div class="col-md-12 text-end">
                                   <x-filters.modal/>

@@ -9,22 +9,22 @@ use App\Http\Controllers\PainelAdmController;
 use App\Models\PainelAdm;
 use Illuminate\Auth\Events\Login;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+/* Rotas para login e registro */
 
-/* Rota para home */
+Route::get('/registrar', [RegisterController::class, 'create'])->name('registrar');
+Route::post('/login/register', [RegisterController::class, 'store'])->name('login.register');
+Route::view("/login", "admin.login.form")->name("login.form");
+Route::post("/admin/auth", [LoginController::class, "auth"])->name("login.auth");
+Route::get("/logout", [LoginController::class, "logout"]);
+
+/* Rotas para home */
+
 Route::get('/', [HomeController::class, 'index']);
+
+/* Middleware para proteção de rotas (Só poderá acessar se estiver logado) */
 Route::middleware("validaLogin")->group(function(){
     
-    /* Rota para eventos */
+    /* Rotas para eventos */
 
     Route::get('/events/create', [EventController::class, 'create']);
     Route::get('/events/edit/{id}', [EventController::class, 'edit']);
@@ -35,13 +35,6 @@ Route::middleware("validaLogin")->group(function(){
 });
 
 Route::get('/events', [EventController::class, 'index']);
-/* Rota para login e registro */
-
-Route::get('/login/register', [RegisterController::class, 'create']);
-Route::post('/login/register', [RegisterController::class, 'store'])->name('login.register');
-Route::view("/admin/login", "admin.login.form")->name("login.form");
-Route::post("/admin/auth", [LoginController::class, "auth"])->name("login.auth");
-Route::get("/admin/logout", [LoginController::class, "logout"]);
 
 /* Rotas para estilização e criação das views */
 
@@ -53,6 +46,6 @@ Route::get('/estabelecimentos', function () {
     return view("list-establishment");
 });
 
-/* Rota para painel admnistrativo */
+/* Rotas para painel admnistrativo */
 
 Route::resource('admin/paineladm', PainelAdmController::class);
