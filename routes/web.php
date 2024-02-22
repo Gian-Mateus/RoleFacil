@@ -47,7 +47,7 @@ Route::get('/estabelecimento', function () {
 });
 
 Route::get('/estabelecimentos', function () {
-    return view("listEstablishment");
+    return view("list");
 });
 Route::get('/evento', function () {
     return view("event");
