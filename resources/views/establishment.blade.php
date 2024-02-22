@@ -13,8 +13,9 @@
                 @endfor
             </span>
         </div>
-
-        <x-carousel idCarousel="carousel-Event" />
+        <div class="content-carousel">
+            <x-carousel idCarousel="carousel-Event" />
+        </div>
 
         <div class="how-us bg-secondary rounded p-3 shadow">
             <h3>Quem somos:</h3>
@@ -43,7 +44,12 @@
         </div>
 
         <div class="tab-evt-links bg-secondary rounded p-3 shadow mb-3">
-            <x-tabnav-events/>
+            <x-tabnav-events
+                id1="events"
+                item1="Eventos"
+                id2="profile"
+                item2="Links"
+            />
             
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="events-tab-pane" role="tabpanel" aria-labelledby="events-tab" tabindex="0">

@@ -43,7 +43,10 @@ Route::get('/estabelecimento', function () {
 });
 
 Route::get('/estabelecimentos', function () {
-    return view("list-establishment");
+    return view("listEstablishment");
+});
+Route::get('/evento', function () {
+    return view("event");
 });
 
 /* Rotas para painel admnistrativo */
