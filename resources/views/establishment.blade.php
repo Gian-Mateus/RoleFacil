@@ -14,7 +14,7 @@
             </span>
         </div>
 
-        <x-carousel idCarousel="carouselEvent" classCarousel="carousel"/>
+        <x-carousel idCarousel="carousel-Event" />
 
         <div class="how-us bg-secondary rounded p-3 shadow">
             <h3>Quem somos:</h3>
