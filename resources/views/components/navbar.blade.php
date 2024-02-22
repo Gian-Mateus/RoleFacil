@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-xl">
-    <div class="container-fluid">
+    <div class="container">
         <a class="navbar-brand" href="#">
             <x-svg.logo width="6rem" height="6rem"/>
         </a>
