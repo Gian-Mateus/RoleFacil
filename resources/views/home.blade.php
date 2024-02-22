@@ -6,6 +6,9 @@
     <x-svg.settings/>
 </button>
 
+@desktop
+<x-filters.accordion/>
+@enddesktop
 <div class="content-carousel">
     <x-carousel idCarousel="carousel-Home" />
 </div>
