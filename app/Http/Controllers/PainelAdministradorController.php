@@ -2,26 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\PainelAdm;
+use App\Models\PainelAdministrador;
 use Illuminate\Http\Request;
 
-class PainelAdmController extends Controller
+class PainelAdministradorController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-            $dados = [
-                'id' => '01',
-                'nome' => 'Dudu, dudu e Edu',
-                'email' => 'teste@correios.com.br'
-                // Outros dados que você queira passar para a view
-            ];
-
-            return view('admin.paineladm', compact('dados'));
-
-
+        return view('admin/painel-administrador');
     }
 
     /**
@@ -43,7 +34,7 @@ class PainelAdmController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(PainelAdm $painelAdm)
+    public function show(PainelAdministrador $painelAdministrador)
     {
         //
     }
@@ -51,7 +42,7 @@ class PainelAdmController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(PainelAdm $painelAdm)
+    public function edit(PainelAdministrador $painelAdministrador)
     {
         //
     }
@@ -59,7 +50,7 @@ class PainelAdmController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, PainelAdm $painelAdm)
+    public function update(Request $request, PainelAdministrador $painelAdministrador)
     {
         //
     }
@@ -67,7 +58,7 @@ class PainelAdmController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(PainelAdm $painelAdm)
+    public function destroy(PainelAdministrador $painelAdministrador)
     {
         //
     }

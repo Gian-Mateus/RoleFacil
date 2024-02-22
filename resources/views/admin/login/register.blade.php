@@ -12,8 +12,8 @@
         <div class="container vh-100">
             <div class="row justify-content-center align-items-center h-100">
                 <div class="container d-flex justify-content-center">
-                    <a class="navbar-brand" href="#">
-                        <x-svg.logo width="8rem" height="8rem"/>
+                    <a class="navbar-brand" href="/">
+                        <x-svg.logo width="10rem" height="10rem"/>
                     </a>
                 </div>
                 <div class="col col-sm-12 col-md-6">
@@ -88,14 +88,17 @@
                                   <label for="telefone_fixo" class="form-label mb-0">Telefone Fixo</label>
                                   <input type="text" class="form-control" name="telefone_fixo" id="telefone_fixo">
                                 </div>
+                                <div class="col-md-6 text-start">
+                                  <x-filters.modal-privacy/>
+                                </div>
+                                <div class="col-md-6 text-start">
+                                  <x-filters.modal-user/>
+                                </div>
                                 <div class="col-12 mb-3">
                                   <button type="submit" class="btn btn-primary w-100 fs-5 fw-bold icon-link-hover">Registrar-se</button>
                                 </div>
                                 <div class="col-md-12 text-center">
                                   <a class="link-light link-underline-opacity-0" href="{{route('login.form')}}">Já tem uma conta? Faça o login aqui!</a>
-                                </div>
-                                <div class="col-md-12 text-end">
-                                  <x-filters.modal/>
                                 </div>
                               </form>
                         </div>
