@@ -15,7 +15,7 @@ class carousel extends Component
         public string $idCarousel
     )
     {
-        //
+        
     }
 
     /**
