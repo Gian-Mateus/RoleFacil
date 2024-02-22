@@ -53,7 +53,7 @@ Route::get('/estabelecimentos', function () {
 /* Rotas para painel admnistrativo */
 
 
-Route::resource('admin/paineladm', PainelAdmController::class);
+Route::get('admin/painel-administrador', [PainelAdministradorController::class, 'index']);
 
 /* Rota para login e registro */
 
