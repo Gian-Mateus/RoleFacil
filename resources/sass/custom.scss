@@ -94,6 +94,9 @@ body{
 }
 
 // NavBar
+.navbar-brand{
+    margin: 0 !important;
+}
 .nav-item{
     text-align: center;
 }
@@ -102,7 +105,8 @@ body{
 }
 
 .form-search{
-    width: 70%;
+    flex: 1;
+    margin-right: 1rem;
 }
 
 .navbar-nav{
