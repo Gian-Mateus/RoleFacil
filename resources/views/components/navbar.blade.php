@@ -57,6 +57,16 @@
                     <h4>Login</h4>
                 </a>
                 </li>
+                @if (Auth::user())
+                <li class="nav-item">
+                    <a class="nav-link" href="login/cadastro">
+                        <div class="icon ps-1">
+                            <x-svg.logout/>
+                        </div>
+                        <h4>Sair</h4>
+                    </a>
+                </li>
+                @endif
             </ul>
 
         </div>
