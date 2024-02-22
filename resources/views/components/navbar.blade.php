@@ -5,7 +5,7 @@
         </a>
         <form class="d-flex form-search" role="search">
             <div class="input-group">
-                <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+                <input class="form-control" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
                 <button class="input-group-text" type="submit">
                     <x-svg.search/>
                 </button>
