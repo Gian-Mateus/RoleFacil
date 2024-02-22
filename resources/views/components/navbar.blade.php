@@ -49,6 +49,7 @@
                         <h4>Contato</h4>
                     </a>
                 </li>
+                @if (!Auth::user())
                 <li class="nav-item">
                     <a class="nav-link" href="login">
                         <div class="icon">
@@ -57,9 +58,11 @@
                         <h4>Login</h4>
                     </a>
                 </li>
+                @endif
                 @if (Auth::user())
+                    @php echo Auth::user()->user_name @endphp
                 <li class="nav-item">
-                    <a class="nav-link" href="logout">
+                    <a class="nav-link" href="/logout">
                         <div class="icon ps-1">
                             <x-svg.logout/>
                         </div>
