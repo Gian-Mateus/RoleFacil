@@ -20,17 +20,15 @@
         <h2 class="modal-title " id="staticBackdropLabel">Vaga Freelance</h2>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
-        <h3><p>Oportunidade para rodar a bolsinha, sem experiência necessária.</p>
-        <p>Horário: 14:00 - 22:00</p> 
-        <p>Remuneração: R$15,00 a hora</p>
-        <p> Contatos:</p>
-        
+      <div class="modal-body fs-3">
+          <p>Oportunidade para rodar a bolsinha, sem experiência necessária.</p>
+          <p>Horário: 14:00 - 22:00</p>       
+          <p>Remuneração: R$15,00 a hora</p>
+          <p> Contatos: <a href="mailto:kenga@zona.com.br">kenga@zona.com.br</a></p>
       </h3>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-        <button type="button" class="btn btn-primary">Ok</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Ok</button>
       </div>
     </div>
   </div>
