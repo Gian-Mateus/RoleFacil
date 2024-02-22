@@ -6,7 +6,9 @@
     <x-svg.settings/>
 </button>
 
-<x-carousel idCarousel="carousel-Home" />
+<div class="content-carousel">
+    <x-carousel idCarousel="carousel-Home" />
+</div>
 
 <div class="event-list-cards">
     <x-eventListCard aboutWhat="Eventos"/>
