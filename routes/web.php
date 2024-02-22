@@ -49,3 +49,8 @@ Route::get('/login/register', [RegisterController::class, 'create']);
 Route::post('/login/register', [RegisterController::class, 'store'])->name('login.register');
 Route::get('/login/logar', [LoginController::class, 'index']);
 Route::post('/login/logar', [LoginController::class, 'store'])->name('login.logar');
+
+
+Route::get('/client', function () {
+    return view("admin.client");
+});
