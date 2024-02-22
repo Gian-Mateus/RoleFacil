@@ -12,7 +12,7 @@
         <div class="container vh-100">
             <div class="row justify-content-center align-items-center h-100">
                 <div class="container d-flex justify-content-center">
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="/">
                         <x-svg.logo width="10rem" height="10rem"/>
                     </a>
                 </div>
