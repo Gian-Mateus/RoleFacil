@@ -20,6 +20,20 @@ class RegisterController extends Controller
      */
     public function store(Request $request)
     {
+        $api_key = "AIzaSyCFOe8jC0NWPr-qG-55j7II02ZhoBwfKLo";
+        $address_alterado = str_replace(" ", "+", $request->address);
+        $city_alterado = str_replace(" ", "+", $request->city);
+        $neighborhood_alterado = str_replace(" ", "+", $request->neighborhood);
+        $localidade = $address_alterado .'+'. $request->number_address .'+'. $city_alterado .'+'. $neighborhood_alterado;
+        $base_url = "https://maps.googleapis.com/maps/api/geocode/json?key={$api_key}&address={$localidade}&components=coutry%3ABR";
+        $response = json_decode(file_get_contents($base_url));
+        $caminho1 = $response->results;
+        $caminho2 = $caminho1[0];
+        $caminho3 = $caminho2->geometry;
+        $caminho4 = $caminho3->location;
+        $lat = $caminho4->lat;
+        $lng = $caminho4->lng;
+
         $user = new User;
 
         $user->email = $request->email;
@@ -34,6 +48,8 @@ class RegisterController extends Controller
         $user->user_city = $request->city;
         $user->user_neighborhood = $request->neighborhood;
         $user->user_uf = $request->uf;
+        $user->user_latitude = $lat;
+        $user->user_longitude = $lng;
         $user->user_facebook_link = $request->facebook_link;
         $user->user_instagram_link = $request->instagram_link;
         $user->user_celular = $request->celular;

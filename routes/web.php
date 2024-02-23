@@ -67,5 +67,4 @@ Route::get('/client', function () {
     return view("admin.client");
 });
 
-Route::get('admin/painel', [PainelAdministradorController::class, 'index'])->name('admin.painel');;
-
+Route::get('/admin/painel', [PainelAdministradorController::class, 'index'])->name('admin.painel');

@@ -31,6 +31,8 @@ class User extends Authenticatable
         'user_city',
         'user_neighborhood',
         'user_uf',
+        'user_latitude',
+        'user_longitude',
         'user_facebook_link',
         'user_instagram_link',
         'user_celular',

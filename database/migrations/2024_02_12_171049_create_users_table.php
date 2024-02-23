@@ -25,6 +25,8 @@ return new class extends Migration
             $table->string('user_city', 50);
             $table->string('user_neighborhood', 50);
             $table->string('user_uf', 2);
+            $table->string('user_latitude', 20);
+            $table->string('user_longitude', 20);
             $table->text('user_facebook_link')->nullable();
             $table->text('user_instagram_link')->nullable();
             $table->string('user_celular', 9);
