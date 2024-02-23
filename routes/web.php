@@ -47,7 +47,10 @@ Route::get('/estabelecimento', function () {
 });
 
 Route::get('/estabelecimentos', function () {
-    return view("list-establishment");
+    return view("list");
+});
+Route::get('/evento', function () {
+    return view("event");
 });
 
 /* Rotas para painel admnistrativo */
@@ -67,4 +70,9 @@ Route::get('/client', function () {
     return view("admin.client");
 });
 
-Route::get('/admin/painel', [PainelAdministradorController::class, 'index'])->name('admin.painel');
+Route::get('admin/painel', [PainelAdministradorController::class, 'index'])->name('admin.painel');;
+
+Route::get('/datepicker', function () {
+    return view("datepicker");
+});
+
