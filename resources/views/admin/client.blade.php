@@ -1,6 +1,8 @@
 @extends('layout')
 @section('content')
 <x-filters.offcanvas/>
+
+
     <div class="container">
         <div class="row text-center mb-3">
             <h1>Portal do Cliente</h1>
@@ -73,5 +75,6 @@
                 </div>
         </form>
     </div>
+
 
 @endsection
