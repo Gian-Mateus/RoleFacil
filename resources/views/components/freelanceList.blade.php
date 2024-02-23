@@ -5,7 +5,7 @@
     </div>
     <div class="row-col cards-events">
         @for ($i = 0; $i < 10; $i++)
-        <x-freelance-card/>
+        <x-freelanceCard/>
         @endfor
     </div>
 </div>

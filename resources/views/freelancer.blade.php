@@ -14,9 +14,9 @@
         {{-- lista de cards --}}
       <div class="event-list-cards row">
 
-        <x-freelance-list aboutWhat="Zona"/>
-        <x-freelance-list aboutWhat="Pirokada no Daniel"/>
-        <x-freelance-list aboutWhat="Pub"/>
-        
+        <x-freelanceList aboutWhat="Zona"/>
+        <x-freelanceList aboutWhat="Pirokada no Daniel"/>
+        <x-freelanceList aboutWhat="Pub"/>
+
     </div>
 @endsection
