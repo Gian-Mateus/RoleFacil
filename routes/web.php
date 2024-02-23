@@ -69,3 +69,7 @@ Route::get('/client', function () {
 
 Route::get('admin/painel', [PainelAdministradorController::class, 'index'])->name('admin.painel');;
 
+Route::get('/datepicker', function () {
+    return view("datepicker");
+});
+
