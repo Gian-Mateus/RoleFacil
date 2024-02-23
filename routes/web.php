@@ -47,13 +47,16 @@ Route::get('/estabelecimento', function () {
 });
 
 Route::get('/estabelecimentos', function () {
-    return view("list-establishment");
+    return view("list");
+});
+Route::get('/evento', function () {
+    return view("event");
 });
 
 /* Rotas para painel admnistrativo */
 
 
-Route::resource('admin/paineladm', PainelAdmController::class);
+Route::get('admin/painel-administrador', [PainelAdministradorController::class, 'index']);
 
 /* Rota para login e registro */
 

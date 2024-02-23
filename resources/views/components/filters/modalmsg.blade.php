@@ -9,9 +9,19 @@
       </div>
       <div class="modal-body">
         <form>
+          <div class="row mb-3">
+            <div class="col">
+              <label for="recipient-name" class="col-form-label">Nome:</label>
+              <input type="text" class="form-control" id="recipient-name">
+            </div>
+            <div class="col">
+              <label for="recipient-phone" class="col-form-label">Telefone para contato:</label>
+              <input type="text" class="form-control" id="recipient-phone">
+            </div>
+          </div>
           <div class="mb-3">
-            <label for="recipient-name" class="col-form-label">Assunto</label>
-            <input type="text" class="form-control" id="recipient-name">
+            <label for="recipient-email" class="col-form-label">E-mail:</label>
+            <input type="text" class="form-control" id="recipient-email">
           </div>
           <div class="mb-3">
             <label for="message-text" class="col-form-label">Mensagem:</label>
@@ -21,7 +31,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-        <button type="button" class="btn btn-primary">Enviar</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Enviar</button>
       </div>
     </div>
   </div>
