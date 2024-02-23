@@ -11,7 +11,7 @@ use Illuminate\Auth\Events\Login;
 
 /* Rotas para login e registro */
 
-Route::get('/registrar', [RegisterController::class, 'create'])->name('registrar');
+Route::get('/register', [RegisterController::class, 'create'])->name('registrar');
 Route::post('/login/register', [RegisterController::class, 'store'])->name('login.register');
 Route::view("/login", "admin.login.form")->name("login.form");
 Route::post("/admin/auth", [LoginController::class, "auth"])->name("login.auth");

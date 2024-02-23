@@ -1,5 +1,6 @@
 @extends('layout')
-@section('content')    
+@section('content')   
+<x-breadcrumb title="Freelancer" /> 
 {{-- <x-filters.offcanvas/>
 <button class="btn btn-primary ms-2 mt-2 border" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasFilters"
     aria-controls="offcanvasFilters" id="collapse-settings">

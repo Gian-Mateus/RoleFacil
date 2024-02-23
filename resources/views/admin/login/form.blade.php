@@ -12,7 +12,8 @@
         <div class="container vh-100">
             <div class="row justify-content-center align-items-center h-100">
                 <div class="container d-flex justify-content-center">
-                    <x-svg.logo width="25rem" height="25rem"/>
+                    <x-svg.logo width="10rem" height="10rem"/>
+                    <a href="/"><x-svg.logo width="25rem" height="25rem"/></a>
                 </div>
                 <div class="col col-sm-12 col-md-6">
                     <div class="card">
@@ -34,7 +35,7 @@
                                   <button type="submit" class="btn btn-primary w-100 fs-5 fw-bold icon-link-hover">Entrar</button>
                                 </div>
                                 <div class="col-md-12 text-center">
-                                    <a class="link-light link-underline-opacity-0" href="{{ route('registrar') }}">Crie uma conta</a>
+                                    <a class="link-light link-underline-opacity-0" href="{{ route('login.register') }}">Crie uma conta</a>
                                 </div>
                               </form>
                         </div>
