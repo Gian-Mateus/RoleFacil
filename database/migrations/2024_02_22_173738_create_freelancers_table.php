@@ -12,7 +12,15 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('freelancers', function (Blueprint $table) {
-            $table->id();
+            $table->id('freelancer_id');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
+            $table->string('freelancer_title', 255);
+            $table->text('freelancer_description');
+            $table->text('freelancer_hour_start', 20);
+            $table->text('freelancer_hour_end', 20);
+            $table->text('freelancer_money', 20);
+            $table->boolean('freelancer_active');
             $table->timestamps();
         });
     }
