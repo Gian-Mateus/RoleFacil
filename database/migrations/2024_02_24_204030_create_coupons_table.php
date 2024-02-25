@@ -11,12 +11,18 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users_has_photos', function (Blueprint $table) {
+        Schema::create('coupons', function (Blueprint $table) {
+            $table->id('coupon_id');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
-            $table->unsignedBigInteger('photo_id');
-            $table->foreign('photo_id')->references('photo_id')->on('photos')->onDelete('cascade')->onUpdate('cascade');
-            $table->string('users_has_photos_photo_url', 255);
+            $table->date('coupon_start');
+            $table->date('coupon_end');
+            $table->string('coupon_type', 30);
+            $table->string('coupon_value', 10);
+            $table->text('coupon_description');
+            $table->boolean('coupon_active');
+            $table->string('coupon_code', 255);
+            $table->string('coupon_amout', 10);
             $table->timestamps();
         });
     }
@@ -26,6 +32,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users_has_photos');
+        Schema::dropIfExists('coupons');
     }
 };
