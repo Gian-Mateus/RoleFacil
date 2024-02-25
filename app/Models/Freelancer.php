@@ -14,8 +14,8 @@ class Freelancer extends Model
         'user_id',
         'freelancer_title',
         'freelancer_description',
-        'freelancer_hour_start',
-        'freelancer_hour_end',
+        'freelancer_start',
+        'freelancer_end',
         'freelancer_money',
         'freelancer_active'
     ];

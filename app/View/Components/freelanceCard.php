@@ -7,27 +7,14 @@ use App\Models\Freelancer;
 
 class FreelanceCard extends Component
 {
-    public $freelancer;
-
-    /**
-     * Create a new component instance.
-     *
-     * @param  int  $freelancerId
-     * @return void
-     */
-    public function __construct($freelancerId)
+    public function __construct()
     {
-        // Fetch the Freelancer data based on $freelancerId
-        $this->freelancer = Freelancer::findOrFail($freelancerId);
+        //
     }
 
-    /**
-     * Get the view / contents that represent the component.
-     *
-     * @return \Illuminate\Contracts\View\View
-     */
     public function render()
     {
-        return view('components.freelanceCard');
+        $freelancer = Freelancer::all();
+        return view('components.freelanceCard', ['freelancer' => $freelancer]);
     }
 }
