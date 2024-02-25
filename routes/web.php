@@ -65,15 +65,7 @@ Route::post('/login/logar', [LoginController::class, 'store'])->name('login.loga
 Route::get('/client', function () {
     return view("admin.client");
 });
-Route::get('/teste', function () {
-    return view("teste");
-});
-
 
 Route::get('admin/painel', [PainelAdministradorController::class, 'index'])->name('admin.painel');;
-
-Route::get('/datepicker', function () {
-    return view("datepicker");
-});
 
 
