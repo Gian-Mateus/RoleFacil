@@ -100,11 +100,6 @@
                                 <div class="col-md-12 text-center mb-3">
                                         <a class="link-light link-underline-opacity-0 mb-" href="{{route('login.form')}}">Já tem uma conta? Faça o login aqui!</a>
                                 </div>
-                                <div class="col-md-12">
-                                    <div class="row">
-                                        <x-filters.modal/>
-                                    </div>
-                                </div>
                               </form>
                         </div>
                       </div>
