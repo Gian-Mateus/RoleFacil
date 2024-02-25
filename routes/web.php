@@ -56,24 +56,7 @@ Route::get('/evento', function () {
 
 /* Rota para login e registro */
 
-Route::get('/login/register', [RegisterController::class, 'create']);
-Route::post('/login/register', [RegisterController::class, 'store'])->name('login.register');
-Route::get('/login/logar', [LoginController::class, 'index']);
-Route::post('/login/logar', [LoginController::class, 'store'])->name('login.logar');
-
-
 Route::get('/client', function () {
     return view("admin.client");
 });
-Route::get('/teste', function () {
-    return view("teste");
-});
-
-
-Route::get('admin/painel', [PainelAdministradorController::class, 'index'])->name('admin.painel');;
-
-Route::get('/datepicker', function () {
-    return view("datepicker");
-});
-
 
