@@ -17,6 +17,9 @@ class Freelancer extends Model
         'freelancer_start',
         'freelancer_end',
         'freelancer_money',
-        'freelancer_active'
+        'freelancer_active',
+        'freelancer_email',
+        'freelancer_phone',
+        'freelancer_telefone_fixo'
     ];
 }
