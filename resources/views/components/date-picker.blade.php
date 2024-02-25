@@ -8,31 +8,18 @@
     <link id="bsdp-css" href="https://unpkg.com/bootstrap-datepicker@1.9.0/dist/css/bootstrap-datepicker3.min.css" rel="stylesheet">
 </head>
 <body>
-
-        <div class="row">
-                <div class="form-group">
-                    <div class='date' id='datetimepicker1'>
-                        <input type='text' class="form-control" />
-                        <span class="input-group-addon">
-                            <span class="glyphicon glyphicon-calendar"></span>
-                        </span>
-                    </div>
+    <div class="row">
+        <div class="col-sm">
+            <div class="input date" data-provide="datepicker">
+                <input type="text" class="form-control" data-date-format="dd/mm/yyyy">
+                <div class="input-group-addon">
+                    <span class="glyphicon glyphicon-th"></span>
                 </div>
-            <script type="text/javascript">
-                $(function () {
-                    $('#datetimepicker1').datepicker({
-                        format: "dd/mm/yy",
-                        weekStart: 0,
-                        calendarWeeks: true,
-                        autoclose: true,
-                        todayHighlight: true,
-                        orientation: "auto"
-                    });
-                });
-            </script>
+            </div>
         </div>
 
-    <script src="https://unpkg.com/bootstrap-datepicker@1.9.0/dist/js/bootstrap-datepicker.min.js"></script>
+    </div>
 
+    <script src="https://unpkg.com/bootstrap-datepicker@1.9.0/dist/js/bootstrap-datepicker.min.js"></script>
 </body>
 </html>

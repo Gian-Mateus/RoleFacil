@@ -58,7 +58,6 @@ $nav-tabs-link-active-bg: $orange-600;
 @import "establishmentAndEvents.scss";
 @import "breadcrumb.scss";
 @import 'cadastro';
-@import 'login';
 
 @import "bootstrap/scss/maps";
 @import "bootstrap/scss/mixins";
@@ -84,6 +83,14 @@ body{
             position: relative;
         }
     }
+}
+
+.painnel{
+    min-width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 @media screen and (max-width: 768px){
     .content-accordion{

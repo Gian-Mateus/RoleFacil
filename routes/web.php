@@ -2,10 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\admin\LoginController;
 use App\Http\Controllers\RegisterController;
-use App\Http\Controllers\PainelAdministradorController;
 use App\Http\Controllers\FreelancerController;
 use Illuminate\Auth\Events\Login;
 
@@ -20,6 +20,7 @@ Route::get("/logout", [LoginController::class, "logout"]);
 /* Rotas para home */
 
 Route::get('/', [HomeController::class, 'index']);
+Route::post('/contact', [ContactController::class, 'store'])->name('contact');
 
 /* Rotas para freelancer */
 
@@ -53,11 +54,6 @@ Route::get('/evento', function () {
     return view("event");
 });
 
-/* Rotas para painel admnistrativo */
-
-
-Route::get('admin/painel-administrador', [PainelAdministradorController::class, 'index']);
-
 /* Rota para login e registro */
 
 Route::get('/login/register', [RegisterController::class, 'create']);
@@ -69,10 +65,15 @@ Route::post('/login/logar', [LoginController::class, 'store'])->name('login.loga
 Route::get('/client', function () {
     return view("admin.client");
 });
+Route::get('/teste', function () {
+    return view("teste");
+});
+
 
 Route::get('admin/painel', [PainelAdministradorController::class, 'index'])->name('admin.painel');;
 
 Route::get('/datepicker', function () {
     return view("datepicker");
 });
+
 

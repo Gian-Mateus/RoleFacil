@@ -1,10 +1,15 @@
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+@if(session()->has('msg'))
+    <div class="alert alert-success">
+        {{ session()->get('msg') }}
+    </div>
+@endif
+
 <script src='https://unpkg.com/@turf/turf@6/turf.min.js'></script>
 <script>
     
     var users = {{ Illuminate\Support\Js::from($users) }};
     async function obterLocalizacao() {
-        const promise = new Promise((resolve) => {
+        const user_location = new Promise((resolve) => {
                  navigator.geolocation.getCurrentPosition((position) => {
                     const latitude = position.coords.latitude;
                     const longitude = position.coords.longitude;
@@ -12,7 +17,7 @@
                     resolve(localizacao);
             });
         });
-        const localizacao = await promise;
+        const localizacao = await user_location;
         return localizacao;
     }
     function obterDistancia(range_distance, localizacao) {
@@ -26,15 +31,14 @@
             }
         }
     }
-    $(document).ready(function() {
-        $('#form-salvar').submit(function(e) {
-            e.preventDefault();
-            var range_distance = $('#range-distance').val();
-            obterLocalizacao().then((localizacao) => {
-                obterDistancia(range_distance, localizacao);
-            });
+
+    function obterDiferencaDistancia() {
+        var range_distance = document.querySelector('#range-distance');
+        range_distance = range_distance.value;
+        obterLocalizacao().then((localizacao) => {
+            obterDistancia(range_distance, localizacao);
         });
-    });
+    };
 </script>
 
 @extends('layout')

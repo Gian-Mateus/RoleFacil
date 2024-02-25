@@ -53,11 +53,9 @@ class RegisterController extends Controller
         $user->user_facebook_link = $request->facebook_link;
         $user->user_instagram_link = $request->instagram_link;
         $user->user_celular = $request->celular;
-        $user->user_ddd_celular = $request->ddd_celular;
         $user->user_telefone_fixo = $request->telefone_fixo;
-        $user->user_ddd_telefone_fixo = $request->ddd_telefone_fixo;
 
         $user->save();
-        return redirect('login')->with('success', 'Usuário registrado com sucesso!');
+        return redirect('login')->with('msg', 'Usuário registrado com sucesso!');
     }
 }
