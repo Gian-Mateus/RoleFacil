@@ -9,7 +9,7 @@
             </div>
                 <div class="container">
                     <div class="row">
-                        <div class="painnel col-sm-12 col-md-6">
+                        <div class="painel col-sm-12 col-md-8">
                             <div class="mb-3">
                                 <div class="accordion" id="accordionExample">
                                     <div class="accordion-item">
