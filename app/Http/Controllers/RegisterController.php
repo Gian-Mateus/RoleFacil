@@ -58,6 +58,6 @@ class RegisterController extends Controller
         $user->user_ddd_telefone_fixo = $request->ddd_telefone_fixo;
 
         $user->save();
-        return redirect('login')->with('success', 'Usuário registrado com sucesso!');
+        return redirect('login')->with('msg', 'Usuário registrado com sucesso!');
     }
 }

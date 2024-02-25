@@ -9,6 +9,11 @@
 </head>
 <body>
     <main>
+        @if(session()->has('msg'))
+            <div class="alert alert-success">
+                {{ session()->get('msg') }}
+            </div>
+        @endif
         <div class="container vh-100">
             <div class="row justify-content-center align-items-center h-100">
                 <div class="container d-flex justify-content-center">

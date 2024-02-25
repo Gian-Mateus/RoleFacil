@@ -7,7 +7,7 @@
                     Distância
                 </span>
                 <span class="pt-2 pe-2">
-                    <button type="submit" class="btn btn-outline-primary">
+                    <button type="button" onclick="obterDiferencaDistancia()" class="btn btn-outline-primary">
                         Filtrar
                     </button>
                 </span>

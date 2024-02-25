@@ -2,17 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\PainelAdministrador;
+use App\Mail\Contact;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
-class PainelAdministradorController extends Controller
+class ContactController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('admin/painel-administrador');
+        //
     }
 
     /**
@@ -28,13 +29,19 @@ class PainelAdministradorController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $sent = Mail::to('contato@rolefacil.com', 'RoleFacil')->send(new Contact(data: [
+            'fromName' => $request->input('name'),
+            'fromEmail' => $request->input('email'),
+            'message' => $request->input('message')
+        ]));
+
+        return redirect('/')->with('msg', 'Contato realizado com sucesso');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(PainelAdministrador $painelAdministrador)
+    public function show(Contact $contact)
     {
         //
     }
@@ -42,7 +49,7 @@ class PainelAdministradorController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(PainelAdministrador $painelAdministrador)
+    public function edit(Contact $contact)
     {
         //
     }
@@ -50,7 +57,7 @@ class PainelAdministradorController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, PainelAdministrador $painelAdministrador)
+    public function update(Request $request, Contact $contact)
     {
         //
     }
@@ -58,7 +65,7 @@ class PainelAdministradorController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(PainelAdministrador $painelAdministrador)
+    public function destroy(Contact $contact)
     {
         //
     }

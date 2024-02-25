@@ -11,8 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('painel_adms', function (Blueprint $table) {
-            $table->id();
+        Schema::create('contacts', function (Blueprint $table) {
+            $table->id('contact_id');
+            $table->string('contact_name', 30);
+            $table->string('contact_phone', 11);
+            $table->string('contact_email', 50);
+            $table->text('contact_message');
             $table->timestamps();
         });
     }
@@ -22,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('painel_adms');
+        Schema::dropIfExists('contacts');
     }
 };
