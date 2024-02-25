@@ -1,3 +1,46 @@
+@if(session()->has('msg'))
+    <div class="alert alert-success">
+        {{ session()->get('msg') }}
+    </div>
+@endif
+
+<script src='https://unpkg.com/@turf/turf@6/turf.min.js'></script>
+<script>
+    
+    var users = {{ Illuminate\Support\Js::from($users) }};
+    async function obterLocalizacao() {
+        const user_location = new Promise((resolve) => {
+                 navigator.geolocation.getCurrentPosition((position) => {
+                    const latitude = position.coords.latitude;
+                    const longitude = position.coords.longitude;
+                    const localizacao = [latitude, longitude];
+                    resolve(localizacao);
+            });
+        });
+        const localizacao = await user_location;
+        return localizacao;
+    }
+    function obterDistancia(range_distance, localizacao) {
+        var options = {units: 'kilometers'};
+        var from = turf.point([localizacao[0], localizacao[1]]);
+        for (var user in users) {
+            var to = turf.point([users[user]['user_latitude'], users[user]['user_longitude']]);
+            var distance = turf.distance(from, to, options);
+            if(distance < range_distance) {
+                console.log(distance);
+            }
+        }
+    }
+
+    function obterDiferencaDistancia() {
+        var range_distance = document.querySelector('#range-distance');
+        range_distance = range_distance.value;
+        obterLocalizacao().then((localizacao) => {
+            obterDistancia(range_distance, localizacao);
+        });
+    };
+</script>
+
 @extends('layout')
 @section('content')   
 

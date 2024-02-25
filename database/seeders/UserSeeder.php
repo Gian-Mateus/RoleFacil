@@ -25,10 +25,10 @@ class UserSeeder extends Seeder
             'user_city' => 'Timbó',
             'user_neighborhood' => 'Padre Martinho Stein',
             'user_uf' => 'SC',
-            'user_celular' => '992899948',
-            'user_ddd_celular' => '47',
-            'user_telefone_fixo' => '92899948',
-            'user_ddd_telefone_fixo' => '47'
+            'user_latitude' => '-26.8249384',
+            'user_longitude' => '-49.2890096',
+            'user_celular' => '47992899948',
+            'user_telefone_fixo' => '4792899948',
         ]);
     }
 }

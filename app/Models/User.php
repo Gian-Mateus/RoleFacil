@@ -36,9 +36,7 @@ class User extends Authenticatable
         'user_facebook_link',
         'user_instagram_link',
         'user_celular',
-        'user_ddd_celular',
         'user_telefone_fixo',
-        'user_ddd_telefone_fixo',
     ];
 
     /**
