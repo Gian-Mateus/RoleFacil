@@ -84,6 +84,12 @@ body{
         }
     }
 }
+
+.painel{
+    width: 60vw;
+    margin: 0 auto;
+
+}
 @media screen and (max-width: 768px){
     .content-accordion{
         width: 0 !important;

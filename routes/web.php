@@ -59,4 +59,3 @@ Route::get('/evento', function () {
 Route::get('/client', function () {
     return view("admin.client");
 });
-
