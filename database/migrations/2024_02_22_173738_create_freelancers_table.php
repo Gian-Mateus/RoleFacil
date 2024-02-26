@@ -19,10 +19,10 @@ return new class extends Migration
             $table->text('freelancer_description');
             $table->string('freelancer_start', 20);
             $table->string('freelancer_end', 20);
-            $table->string('freelancer_money', 20);
+            $table->string('freelancer_money', 20)->nullable();
             $table->string('freelancer_email', 255);
-            $table->string('freelancer_phone', 11);
-            $table->string('freelancer_telefone_fixo', 10);
+            $table->string('freelancer_phone', 11)->nullable();
+            $table->string('freelancer_telefone_fixo', 10)->nullable();
             $table->boolean('freelancer_active');
             $table->timestamps();
         });
