@@ -58,7 +58,6 @@ $nav-tabs-link-active-bg: $orange-600;
 @import "establishmentAndEvents.scss";
 @import "breadcrumb.scss";
 @import 'cadastro';
-@import 'login';
 
 @import "bootstrap/scss/maps";
 @import "bootstrap/scss/mixins";
@@ -85,6 +84,22 @@ body{
         }
     }
 }
+
+.painel{
+    width: 60vw;
+    margin: 0 auto;
+}
+
+// input[type="date"]:in-range::-webkit-datetime-edit-year-field,
+// input[type="date"]:in-range::-webkit-datetime-edit-month-field,
+// input[type="date"]:in-range::-webkit-datetime-edit-day-field {
+//     color: transparent;
+// }
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    filter: invert(0.8) brightness(50%) sepia(100%) saturate(10000%) hue-rotate(240deg);
+  }
 @media screen and (max-width: 768px){
     .content-accordion{
         width: 0 !important;

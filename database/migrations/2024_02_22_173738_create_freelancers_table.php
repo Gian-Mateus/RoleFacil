@@ -17,9 +17,12 @@ return new class extends Migration
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
             $table->string('freelancer_title', 255);
             $table->text('freelancer_description');
-            $table->text('freelancer_hour_start', 20);
-            $table->text('freelancer_hour_end', 20);
-            $table->text('freelancer_money', 20);
+            $table->string('freelancer_start', 20);
+            $table->string('freelancer_end', 20);
+            $table->string('freelancer_money', 20)->nullable();
+            $table->string('freelancer_email', 255);
+            $table->string('freelancer_phone', 11)->nullable();
+            $table->string('freelancer_telefone_fixo', 10)->nullable();
             $table->boolean('freelancer_active');
             $table->timestamps();
         });

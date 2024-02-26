@@ -6,15 +6,12 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class freelanceList extends Component
+class datePickerRange extends Component
 {
     /**
      * Create a new component instance.
      */
-    
-    public function __construct(
-        public string $aboutWhat
-    )
+    public function __construct()
     {
         //
     }
@@ -24,6 +21,6 @@ class freelanceList extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.freelanceList');
+        return view('components.date-picker-range');
     }
 }

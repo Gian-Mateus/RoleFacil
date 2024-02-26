@@ -29,10 +29,8 @@ return new class extends Migration
             $table->string('user_longitude', 20);
             $table->text('user_facebook_link')->nullable();
             $table->text('user_instagram_link')->nullable();
-            $table->string('user_celular', 9);
-            $table->string('user_ddd_celular', 2);
-            $table->string('user_telefone_fixo', 8);
-            $table->string('user_ddd_telefone_fixo', 2);
+            $table->string('user_celular', 11);
+            $table->string('user_telefone_fixo', 10);
             $table->timestamps();
         });
     }

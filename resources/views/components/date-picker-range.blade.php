@@ -9,17 +9,20 @@
 </head>
 <body>
     <div class="row">
-        <div class="col-sm">
-            <div class="input date" data-provide="datepicker">
-                <input type="text" class="form-control" data-date-format="dd/mm/yyyy">
-                <div class="input-group-addon">
-                    <span class="glyphicon glyphicon-th"></span>
-                </div>
-            </div>
+        <div class="col-sm-12 mb-2">
+
+
         </div>
+        <script>
+            $("#timepicker-basic").timepicker();
+        </script>
+        <script type="text/javascript">
+            $(function() {
+
+            });
+        </script>
 
     </div>
-
     <script src="https://unpkg.com/bootstrap-datepicker@1.9.0/dist/js/bootstrap-datepicker.min.js"></script>
 </body>
 </html>

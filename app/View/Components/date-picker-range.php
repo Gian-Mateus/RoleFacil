@@ -1,13 +1,12 @@
 <?php
 
-namespace App\View\Components\filters;
+namespace App\View\Components;
 
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
-use App\Models\User;
 
-class modalmsg extends Component
+class date-picker-range extends Component
 {
     /**
      * Create a new component instance.
@@ -22,6 +21,6 @@ class modalmsg extends Component
      */
     public function render(): View|Closure|string
     {
-        //
+        return view('components.date-picker-range');
     }
 }
