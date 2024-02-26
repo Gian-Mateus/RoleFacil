@@ -20,9 +20,18 @@
         </div>
         <div class="modal-body fs-3">
             <p>{{$freelancer['freelancer_description']}}</p>
-            <p>{{$freelancer['freelancer_start']}} até {{$freelancer['freelancer_end']}}</p>       
-            <p>{{$freelancer['freelancer_money']}}</p>
+            <p>{{$freelancer['freelancer_start']}} até {{$freelancer['freelancer_end']}}</p> 
+            @if($freelancer['freelancer_money'])      
+            <p>R${{$freelancer['freelancer_money']}} por hora</p>
+            @else
+            <p>Valor a combinar.</p>
+            @endif
+            @if($freelancer['freelancer_phone'])
+            <p> Whatsapp: <a href="#">{{$freelancer['freelancer_phone']}}</a></p>
+            @endif
+            @if($freelancer['freelancer_telefone_fixo'])
             <p> Telefone: <a href="#">{{$freelancer['freelancer_phone']}}</a></p>
+            @endif
             <p> Email: <a href="#">{{$freelancer['freelancer_email']}}</a></p>
         </h3>
         </div>
