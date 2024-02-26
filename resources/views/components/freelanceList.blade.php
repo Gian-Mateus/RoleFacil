@@ -3,7 +3,7 @@
         <h2 class="text-white fw-semibold">{{ $aboutWhat }}</h2>
         
     </div>
-    <div class="row-col cards-events">
+    <div class="row-col cards-events freelance-list">
         @for ($i = 0; $i < 10; $i++)
         <x-freelanceCard/>
         @endfor
