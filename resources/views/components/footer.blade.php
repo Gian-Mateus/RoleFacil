@@ -12,7 +12,7 @@
                     <a href="https://www.instagram.com/rolefacil/"><x-svg.social.instagram/></a>
                 </li>
                 <li>
-                    <x-svg.social.twiter/>
+                    <a href="https://twitter.com/rolefacil"><x-svg.social.twiter/></a>
                 </li>
             </ul>
         </div>
