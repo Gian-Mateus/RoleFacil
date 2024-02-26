@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Cli_Establishment_Seed extends Model
+class CliEstablishmentSeed extends Model
 {
     use HasFactory;
     

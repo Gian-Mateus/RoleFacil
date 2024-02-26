@@ -17,13 +17,13 @@ return new class extends Migration
             $table->text('cli_establishment_seed_description')->nullable();
             $table->string('cli_establishment_seed_address', 255)->nullable();
             $table->string('cli_establishment_seed_address_formatted', 255)->nullable();
-            $table->string('cli_establishment_seed_phone', 11)->nullable();
+            $table->string('cli_establishment_seed_phone', 20)->nullable();
             $table->string('cli_establishment_seed_phone_formatted', 20)->nullable();
             $table->string('cli_establishment_seed_city', 50)->nullable();
             $table->string('cli_establishment_seed_zipcode', 10)->nullable();
             $table->string('cli_establishment_seed_neighborhood', 50)->nullable();
             $table->string('cli_establishment_seed_number_address', 20)->nullable();
-            $table->string('cli_establishment_seed_uf', 2)->nullable();
+            $table->string('cli_establishment_seed_uf', 45)->nullable();
             $table->string('cli_establishment_seed_lat', 20)->nullable();
             $table->string('cli_establishment_seed_lng', 20)->nullable();
             $table->text('cli_establishment_seed_categories')->nullable();
