@@ -12,24 +12,24 @@
             
             {{-- filtro1 --}}
             <div class="col-md-2 mt-5 h-25  text-white filtro">
-              <div class="form-check form-check-inline">
-                <h2 class="fw-semibold">Filtro</h2>
+              <div class="form-check form-check-inline
+              ">
+                <div class="title"><h2 class="fw-semibold">Filtro</h2></div>
                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                 <label class="form-check-label" for="flexCheckDefault">
                   Distância
                 </label>
               </div>
-
-              {{-- filtro2 --}}
-              <div class="col-md-2 text-center">
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                  <label class="form-check-label" for="flexCheckChecked">
-                    Valor
-                  </label>
-                </div>
-
+              
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                <label class="form-check-label" for="flexCheckChecked">
+                  Valor
+                </label>
               </div>
+              {{-- filtro2 --}}
+              
+
             </div>
 
             {{-- display de lista --}}
