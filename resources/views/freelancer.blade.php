@@ -6,32 +6,39 @@
           <h3>Encontre aqui uma oportunidade de Freelance que se encaixe com seu perfil!</h3>
         </div>
 
-        
-        <div class="container text-center filtrofreela">
+        {{-- container de filtros --}}
+        <div class="container">
           <div class="row">
-            <div class="col-md-4">
+            
+            {{-- filtro1 --}}
+            <div class="col-md-2 mt-5 h-25  text-white filtro">
               <div class="form-check form-check-inline">
-                <h2>Filtro</h2>
+                <h2 class="fw-semibold">Filtro</h2>
                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                 <label class="form-check-label" for="flexCheckDefault">
                   Distância
                 </label>
               </div>
 
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                <label class="form-check-label" for="flexCheckChecked">
-                  Valor
-                </label>
+              {{-- filtro2 --}}
+              <div class="col-md-2 text-center">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                  <label class="form-check-label" for="flexCheckChecked">
+                    Valor
+                  </label>
+                </div>
+
               </div>
             </div>
 
-
+            {{-- display de lista --}}
             <div class="col-md-8">
               <x-freelanceList aboutWhat="Zona"/>
               <x-freelanceList aboutWhat="Pirokada no Daniel"/>
               <x-freelanceList aboutWhat="Pub"/>
             </div>
+
           </div>
         </div>
 @endsection
