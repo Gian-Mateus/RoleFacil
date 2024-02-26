@@ -90,6 +90,16 @@ body{
     margin: 0 auto;
 }
 
+.freelance-list{
+    margin-bottom: 3rem;
+}
+
+.filtro{
+    background-color: $body-bg;
+    padding: 1rem 0 4rem 0;
+    border-radius: 1rem;
+}
+
 // input[type="date"]:in-range::-webkit-datetime-edit-year-field,
 // input[type="date"]:in-range::-webkit-datetime-edit-month-field,
 // input[type="date"]:in-range::-webkit-datetime-edit-day-field {
@@ -108,4 +118,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
             visibility: hidden;
         }
     }
+
+    .filtro{
+        background-color: $body-bg;
+        border-radius: 1rem;
+        text-align: center;
+    }
+    
 }
+
