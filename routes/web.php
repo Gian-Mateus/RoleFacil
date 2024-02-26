@@ -19,7 +19,7 @@ Route::get("/logout", [LoginController::class, "logout"]);
 
 /* Rotas para home */
 
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::post('/contact', [ContactController::class, 'store'])->name('contact');
 
 /* Rotas para freelancer */

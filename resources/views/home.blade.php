@@ -10,7 +10,7 @@
     var users = {{ Illuminate\Support\Js::from($users) }};
     async function obterLocalizacao() {
         const user_location = new Promise((resolve) => {
-                 navigator.geolocation.getCurrentPosition((position) => {
+                    navigator.geolocation.getCurrentPosition((position) => {
                     const latitude = position.coords.latitude;
                     const longitude = position.coords.longitude;
                     const localizacao = [latitude, longitude];
@@ -62,10 +62,20 @@
 </div>
 
 <div class="event-list-cards row">
-    <x-eventListCard aboutWhat="Eventos"/>
-    <x-eventListCard aboutWhat="Pertos de você"/>
+    <x-eventListCard aboutWhat="Locais">
+
+        {{-- @for ($i = 0 ; $i <= 10; $i++ ) --}}
+            <x-card title="{{ $users[0]["name"] }}"/>
+        {{-- @endfor --}}
+
+    </x-eventListCard>
+
+    {{-- <x-card title="Mais proximos eventos"/> --}}
+
+    {{-- <x-eventListCard aboutWhat="Pertos de você"/>
     <x-eventListCard aboutWhat="Restaurantes"/>
     <x-eventListCard aboutWhat="Pubs"/>
-    <x-eventListCard aboutWhat="Bar"/>
+    <x-eventListCard aboutWhat="Bar"/> --}}
 </div>
+
 @endsection

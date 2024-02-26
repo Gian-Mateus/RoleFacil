@@ -4,8 +4,8 @@
         <span class="align-self-end"><a href="#">Ver mais...</a></span>
     </div>
     <div class="row-col cards-events">
-        @for ($i = 0; $i < 10; $i++)
-        <x-card/>
-        @endfor
+
+        {{ $slot }}
+
     </div>
 </div>
