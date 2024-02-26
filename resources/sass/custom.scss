@@ -90,14 +90,20 @@ body{
     margin: 0 auto;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> d8ee7b78ac758c979cf87bca9df9b3c55fc5f4ce
 .freelance-list{
     margin-bottom: 3rem;
 }
 
 .filtro{
     background-color: $body-bg;
-    padding: 1rem 0 4rem 0;
+    padding: 2rem 0;
     border-radius: 1rem;
+    text-align: center;
+    margin: 0 2vw 0 8vw;
 }
 
 // input[type="date"]:in-range::-webkit-datetime-edit-year-field,
@@ -106,6 +112,10 @@ body{
 //     color: transparent;
 // }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> d8ee7b78ac758c979cf87bca9df9b3c55fc5f4ce
 input[type="date"]::-webkit-calendar-picker-indicator {
     cursor: pointer;
     filter: invert(0.8) brightness(50%) sepia(100%) saturate(10000%) hue-rotate(240deg);
@@ -123,6 +133,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         background-color: $body-bg;
         border-radius: 1rem;
         text-align: center;
+        margin: 0;
     }
 
 }

@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id('coupon_id');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
+            $table->string('coupon_title', 255);
             $table->date('coupon_start');
             $table->date('coupon_end');
             $table->string('coupon_type', 30);

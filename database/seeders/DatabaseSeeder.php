@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             EventSeeder::class,
             FreelanceSeeder::class,
+            Cli_Establishment_SeedSeeder::class,
         ]);
     }
 }
