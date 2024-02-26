@@ -57,8 +57,9 @@ Route::get('/evento', function () {
 
 /* Rota para login e registro */
 
-Route::get('/painelclient', function () {
-    return view("admin.client");
+Route::get('/client', function () {
+    return view("client");
 });
+
 
 
