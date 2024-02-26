@@ -19,13 +19,79 @@
                                       <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
                                             <form action="" method="post">
-                                                <div class="col-sm-12 mb-2">
-                                                    <label for="title" class="form-label mb-0">Título do serviço</label>
-                                                    <input type="text" class="form-control" name="title" id="title" autofocus required>
-                                                </div>
-                                                <div class="col-sm-12 mb-2">
-                                                    <label for="service" class="form-label mb-0">Tipo de serviço</label>
-                                                    <input type="text" class="form-control" name="service" id="service" autofocus required>
+                                                <div class="col-sm-12 col-md-6 d-flex">
+                                                    <div class="col-sm-12 mb-2">
+                                                        <label for="title" class="form-label mb-0">Categorias</label>
+                                                        <div class="row">
+                                                            <div class="col-6">
+                                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                                <label class="form-check-label" for="flexCheckDefault">
+                                                                  Bar
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-6">
+                                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                                <label class="form-check-label" for="flexCheckDefault">
+                                                                  Restaurante
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                                <label class="form-check-label" for="flexCheckDefault">
+                                                                  Cervejaria
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                                <label class="form-check-label" for="flexCheckDefault">
+                                                                  Pizzaria
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-12 mb-2">
+                                                        <label for="title" class="form-label mb-0">Tipo de serviço</label>
+                                                        <div class="row">
+                                                            <div class="col-6">
+                                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                                <label class="form-check-label" for="flexCheckDefault">
+                                                                  Bar
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-6">
+                                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                                <label class="form-check-label" for="flexCheckDefault">
+                                                                  Restaurante
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                                <label class="form-check-label" for="flexCheckDefault">
+                                                                  Cervejaria
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                                <label class="form-check-label" for="flexCheckDefault">
+                                                                  Pizzaria
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
                                                 </div>
                                                 <div class="col-sm-12 mb-2">
                                                     <label for="description" class="form-label mb-0">Descrição do serviço</label>
