@@ -79,35 +79,44 @@
         @endforeach
     </x-eventListCard>
 
-    {{-- <x-eventListCard aboutWhat="Restaurantes" link="{{ route('whatever') }}">
-        @for ($i = 0 ; $i <= 10; $i++ )
+{{--     <x-eventListCard aboutWhat="Restaurantes" link="{{ route('whatever') }}">
+        @foreach ($restaurants as $rest)
             @component('components.card', [
-                'title' => $restaurants[$i]["name"],
-                'text' => $restaurants[$i]["formatted_address"]
+                "img" => $rest["cli_establishment_seed_imgs"][0],
+                'title' => $rest["name"],
+                'text' => $rest["formatted_address"]
                 ])
             @endcomponent
-        @endfor
+        @endforeach
     </x-eventListCard>
 
     <x-eventListCard aboutWhat="Bares" link="1">
-        @for ($i = 0 ; $i <= 10; $i++ )
+        @foreach ($bar as $b)
             @component('components.card', [
-                'title' => $bar[$i]["name"],
-                'text' => $bar[$i]["formatted_address"]
+                "img" => $b["cli_establishment_seed_imgs"][0],
+                'title' => $b["name"],
+                'text' => $b["formatted_address"]
                 ])
             @endcomponent
-        @endfor
-    </x-eventListCard>
+        @endforeach
+    </x-eventListCard> --}}
 
     <x-eventListCard aboutWhat="Padarias" link="1">
-        @for ($i = 0 ; $i < ((count($bakery) < 10)?: 10); $i++ )
+        @php
+            echo "<pre>";
+                
+            echo "</pre>";
+        @endphp
+
+        {{-- @foreach ($bakery as $bak)
             @component('components.card', [
-                'title' => $bakery[$i]["name"],
-                'text' => $bakery[$i]["formatted_address"]
+                "img" => $bak["cli_establishment_seed_imgs"][0],
+                'title' => $bak["name"],
+                'text' => $bak["formatted_address"]
                 ])
             @endcomponent
-        @endfor
-    </x-eventListCard> --}}
+        @endforeach --}}
+    </x-eventListCard>
     
 </div>
 
