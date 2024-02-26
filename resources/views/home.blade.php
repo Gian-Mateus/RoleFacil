@@ -62,20 +62,47 @@
 </div>
 
 <div class="event-list-cards row">
-    <x-eventListCard aboutWhat="Locais">
 
-        {{-- @for ($i = 0 ; $i <= 10; $i++ ) --}}
-            <x-card title="{{ $users[0]["name"] }}"/>
-        {{-- @endfor --}}
-
+    <x-eventListCard aboutWhat="Estabelecimentos" link="{{ route('estabelecimentos') }}">
+        @foreach( $establishment as $estab )
+            @component('components.card', [
+                'title' => $estab["name"],
+                'text' => $estab["formatted_address"]
+                ])
+            @endcomponent
+        @endforeach
     </x-eventListCard>
 
-    {{-- <x-card title="Mais proximos eventos"/> --}}
+    <x-eventListCard aboutWhat="Restaurantes" link="{{ route('whatever') }}">
+        @for ($i = 0 ; $i <= 10; $i++ )
+            @component('components.card', [
+                'title' => $restaurants[$i]["name"],
+                'text' => $restaurants[$i]["formatted_address"]
+                ])
+            @endcomponent
+        @endfor
+    </x-eventListCard>
 
-    {{-- <x-eventListCard aboutWhat="Pertos de você"/>
-    <x-eventListCard aboutWhat="Restaurantes"/>
-    <x-eventListCard aboutWhat="Pubs"/>
-    <x-eventListCard aboutWhat="Bar"/> --}}
+    <x-eventListCard aboutWhat="Bares" link="1">
+        @for ($i = 0 ; $i <= 10; $i++ )
+            @component('components.card', [
+                'title' => $bar[$i]["name"],
+                'text' => $bar[$i]["formatted_address"]
+                ])
+            @endcomponent
+        @endfor
+    </x-eventListCard>
+
+    <x-eventListCard aboutWhat="Padarias" link="1">
+        @for ($i = 0 ; $i < ((count($bakery) < 10)?: 10); $i++ )
+            @component('components.card', [
+                'title' => $bakery[$i]["name"],
+                'text' => $bakery[$i]["formatted_address"]
+                ])
+            @endcomponent
+        @endfor
+    </x-eventListCard>
+    
 </div>
 
 @endsection
