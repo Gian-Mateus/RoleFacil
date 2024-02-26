@@ -39,7 +39,7 @@
                                   <button type="submit" class="btn btn-primary w-100 fs-5 fw-bold icon-link-hover">Entrar</button>
                                 </div>
                                 <div class="col-md-12 text-center">
-                                    <a class="link-light link-underline-opacity-0" href="{{ route('login.register') }}">Crie uma conta</a>
+                                    <a class="link-light link-underline-opacity-0" href="/register">Crie uma conta</a>
                                 </div>
                               </form>
                         </div>

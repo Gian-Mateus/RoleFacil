@@ -72,18 +72,9 @@
                                   <label for="uf" class="form-label mb-0">Estado</label>
                                   <input type="text" class="form-control" name="uf" id="uf" required>
                                 </div>
-                                <div class="col-md-3 mb-3">
-                                  <label for="ddd_celular" class="form-label mb-0">DDD</label>
-                                  <input type="text" class="form-control" name="ddd_celular" id="ddd_celular">
-                                </div>
                                 <div class="col-md-9 mb-3">
                                   <label for="celular" class="form-label mb-0">Celular</label>
                                   <input type="text" class="form-control" name="celular" id="celular">
-                                </div>
-                                <div class="col-md-3 mb-3">
-                                  <label for="ddd_telefone_fixo" class="form-label mb-0">DDD</label>
-                                  <input type="text" class="form-control" name="ddd_telefone_fixo" id="ddd_telefone_fixo">
-                                </div>
                                 <div class="col-md-9 mb-3">
                                   <label for="telefone_fixo" class="form-label mb-0">Telefone Fixo</label>
                                   <input type="text" class="form-control" name="telefone_fixo" id="telefone_fixo">

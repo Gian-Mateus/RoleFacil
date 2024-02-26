@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\Freelancer;
 use Illuminate\Http\Request;
 
@@ -20,7 +21,7 @@ class FreelancerController extends Controller
      */
     public function create()
     {
-        //
+        $users = User::all();
     }
 
     /**
