@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\User;
+use Illuminate\Support\Facades\Storage;
 
 class UserSeeder extends Seeder
 {
@@ -13,24 +14,28 @@ class UserSeeder extends Seeder
      */
     public function run(): void
     {
-        User::create([
-            'email' => 'teste@teste.com',
-            'password' => bcrypt('teste'),
-            'user_name' => 'Bernardo Teste',
-            'user_cnpj' => '12341234000154',
-            'user_zipcode' => '89120000',
-            'user_complement' => 'Casa',
-            'user_address' => 'Sibipiruna',
-            'user_number_address' => '218',
-            'user_city' => 'Timbó',
-            'user_neighborhood' => 'Padre Martinho Stein',
-            'user_uf' => 'SC',
-            'user_latitude' => '-26.8249384',
-            'user_longitude' => '-49.2890096',
-            'user_celular' => '992899948',
-            'user_ddd_celular' => '47',
-            'user_telefone_fixo' => '92899948',
-            'user_ddd_telefone_fixo' => '47'
-        ]);
+        $json = Storage::disk('local')->get('details_places/db_detail_places.json');
+        $clients = json_decode($json, true);
+
+        foreach($clients["results"] as $cli){
+            User::uptdateOrCreate([
+                'email' => 'test@test.com',
+                'password' => bcrypt('123456789'),
+                'user_name' => $cli["name"],
+                'user_cnpj' => '12341234000154',
+                'user_zipcode' => str_replace("-", '', $cli["address_components"]["postal_code"]),
+                'user_address' => ($cli["address_components"]["route"])?: "Rua sem nome",
+                'user_number_address' => ($cli["address_components"]["street_number"])?: "s/n",
+                'user_city' => ($cli["address_components"]["administrative_area_level_2"])?: "City",
+                'user_neighborhood' => 'Padre Martinho Stein',
+                'user_uf' => ($cli["address_components"]["administrative_area_level_1"])?: "State",
+                'user_latitude' => ($cli["geometry"]["location"]["lat"])?: "0.0",
+                'user_longitude' => ($cli["geometry"]["location"]["lng"])?: "0.0",
+                'user_celular' => '992899948',
+                'user_ddd_celular' => '47',
+                'user_telefone_fixo' => '92899948',
+                'user_ddd_telefone_fixo' => '47'
+            ]);
+        }
     }
 }
