@@ -47,9 +47,9 @@ Route::get('/estabelecimentos', function () {
     return view("list");
 })->name("estabelecimentos");
 
-Route::get('/{whatever?}', function () {
-    return view("list");
-})->name("whatever");
+// Route::get('/{whatever?}', function () {
+//     return view("list");
+// })->name("whatever");
 
 Route::get('/evento', function () {
     return view("event");
@@ -57,8 +57,9 @@ Route::get('/evento', function () {
 
 /* Rota para login e registro */
 
-Route::get('/painelclient', function () {
+Route::get('/client', function () {
     return view("admin.client");
 });
+
 
 
