@@ -14,7 +14,7 @@ class FreelanceCard extends Component
 
     public function render()
     {
-        $freelancer = Freelancer::all();
-        return view('components.freelanceCard', ['freelancer' => $freelancer]);
+        $freelancers = Freelancer::all();
+        return view('components.freelanceCard', ['freelancers' => $freelancers]);
     }
 }
