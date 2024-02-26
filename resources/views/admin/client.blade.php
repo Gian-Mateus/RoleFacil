@@ -7,7 +7,6 @@
             <div class="col-12 text-center mb-3">
                 <h1>Portal do Cliente</h1>
             </div>
-<<<<<<< HEAD
             <div class="container">
                 <div class="row">
                     <div class="painel col-sm-12 col-md-8">
@@ -21,7 +20,6 @@
                                     <div class="accordion-body">
                                         <form action="" method="post">
                                             <div class="container">
-=======
                 <div class="container">
                     <div class="row">
                         <div class="painel col-sm-12 col-md-8">
@@ -131,7 +129,6 @@
                                                         </div>
                                                     </div>
                                                 </div>
->>>>>>> d8ee7b78ac758c979cf87bca9df9b3c55fc5f4ce
                                                 <div class="row">
                                                     <div class="col">
                                                         <h4>Categorias</h4>
@@ -199,7 +196,6 @@
                                                     </div>
 
                                                 </div>
-<<<<<<< HEAD
                                             </div>
                                             <div class="col-sm-12 mb-2">
                                                 <label for="description" class="form-label mb-0">Descrição do serviço</label>
@@ -240,12 +236,10 @@
                                                 </div>
                                                 <div class="col-sm-12 mb-2">
                                                     <label for="description" class="form-label mb-0">Descrição do evento</label>
-=======
                                               </form>
                                           </div>
                                         </div>
                                       </div>
-
                                       {{-- CADASTRO DO FREELANCER AQUI --}}
                                       <div class="accordion-item">
                                         <h2 class="accordion-header">
@@ -261,7 +255,6 @@
                                                   </div>
                                                   <div class="col-sm-12 mb-2">
                                                     <label for="freelancer_description" class="form-label mb-0">Descrição do serviço</label>
->>>>>>> d8ee7b78ac758c979cf87bca9df9b3c55fc5f4ce
                                                     <div class="form">
                                                         <textarea rows="3" class="form-control" name="freelancer_description" id="freelancer_description"></textarea>
                                                     </div>
@@ -301,20 +294,17 @@
                                                 <label for="title" class="form-label mb-0">Prazo de validade:</label>
                                                 <div class="row">
                                                     <div class="col-6 mt-2">
-<<<<<<< HEAD
                                                         <label for="title" class="form-label mb-0">início</label>
                                                         <input type="date" class="form-control" name="coupon_start" id="coupon_start" autofocus required>
-=======
+
                                                         <label for="freelancer_start" class="form-label mb-0">Início</label>
                                                         <input type="date" class="form-control" name="freelancer_start" id="freelancer_start" autofocus required>
->>>>>>> d8ee7b78ac758c979cf87bca9df9b3c55fc5f4ce
                                                     </div>
                                                     <div class="col-6 mt-2">
                                                         <label for="freelancer_end" class="form-label mb-0">Final</label>
                                                         <input type="date" class="form-control" name="freelancer_end" id="freelancer_end" autofocus required>
                                                     </div>
                                                 </div>
-<<<<<<< HEAD
                                             </div>
                                             <div class="row">
                                                 <div class="col-sm-12 mb-2 d-flex">
@@ -399,7 +389,6 @@
                                                 <div class="col-sm-12 mb-2">
                                                     <label for="title" class="form-label mb-0">Email de contato</label>
                                                     <input type="text" class="form-control" name="title" id="title" autofocus required>
-=======
                                                   <div class="col-sm-12 mb-2">
                                                       <label for="freelancer_email" class="form-label mb-0">Email de contato</label>
                                                       <input type="text" class="form-control" name="freelancer_email" id="freelancer_email" autofocus required>
@@ -407,7 +396,6 @@
                                                   <div class="col-sm-12 mb-2">
                                                     <label for="freelancer_money" class="form-label mb-0">Valor</label>
                                                     <input type="text" class="form-control" name="freelancer_money" id="freelancer_money" autofocus required>
->>>>>>> d8ee7b78ac758c979cf87bca9df9b3c55fc5f4ce
                                                 </div>
                                                 <div class="col-sm-12 mb-2">
                                                 <label for="title" class="form-label mb-0">Valor</label>
@@ -417,18 +405,15 @@
                                                 <label for="celular" class="form-label mb-0">Celular</label>
                                                 <input type="text" class="form-control" name="celular" id="celular">
                                                 <div class="col-md-9 mb-3">
-<<<<<<< HEAD
                                                 <label for="telefone_fixo" class="form-label mb-0">Telefone Fixo</label>
                                                 <input type="text" class="form-control" name="telefone_fixo" id="telefone_fixo">
                                                 </div>
-=======
                                                     <label for="freelancer_phone" class="form-label mb-0">Celular</label>
                                                     <input type="text" class="form-control" name="freelancer_phone" id="freelancer_phone">
                                                   <div class="col-md-9 mb-3">
                                                     <label for="freelancer_telefone_fixo" class="form-label mb-0">Telefone Fixo</label>
                                                     <input type="text" class="form-control" name="freelancer_telefone_fixo" id="freelancer_telefone_fixo">
                                                   </div>
->>>>>>> d8ee7b78ac758c979cf87bca9df9b3c55fc5f4ce
 
                                                 <div class="col-sm-12 mb-2">
                                                 <div class="mb-3">
