@@ -24,8 +24,8 @@
                                                     <input type="text" class="form-control" name="title" id="title" autofocus required>
                                                 </div>
                                                 <div class="col-sm-12 mb-2">
-                                                    <label for="kind" class="form-label mb-0">Tipo de serviço</label>
-                                                    <input type="text" class="form-control" name="kind" id="kind" autofocus required>
+                                                    <label for="service" class="form-label mb-0">Tipo de serviço</label>
+                                                    <input type="text" class="form-control" name="service" id="service" autofocus required>
                                                 </div>
                                                 <div class="col-sm-12 mb-2">
                                                     <label for="description" class="form-label mb-0">Descrição do serviço</label>
@@ -175,19 +175,41 @@
                                               <form action="" method="post">
                                                 @csrf
                                                   <div class="col-sm-12 mb-2">
-                                                      <label for="title" class="form-label mb-0">Tipo de serviço</label>
+                                                      <label for="freelancer_title" class="form-label mb-0">Título de serviço</label>
+                                                      <input type="text" class="form-control" name="freelancer_title" id="freelancer_title" autofocus required>
+                                                  </div>
+                                                  <div class="col-sm-12 mb-2">
+                                                    <label for="description" class="form-label mb-0">Descrição do serviço</label>
+                                                    <div class="form">
+                                                        <textarea rows="3" class="form-control" name="description" id="description"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-3">
+                                                    <div class="col-6 mt-2">
+                                                        <label for="title" class="form-label mb-0">Início</label>
+                                                        <input type="date" class="form-control" name="coupon_start" id="coupon_start" autofocus required>
+                                                    </div>
+                                                    <div class="col-6 mt-2">
+                                                        <label for="title" class="form-label mb-0">Final</label>
+                                                        <input type="date" class="form-control" name="coupon_end" id="coupon_end" autofocus required>
+                                                    </div>
+                                                </div>
+                                                  <div class="col-sm-12 mb-2">
+                                                      <label for="title" class="form-label mb-0">Email de contato</label>
                                                       <input type="text" class="form-control" name="title" id="title" autofocus required>
                                                   </div>
                                                   <div class="col-sm-12 mb-2">
-                                                      <label for="title" class="form-label mb-0">Data/peírodo</label>
-                                                      <input type="text" class="form-control" name="title" id="title" autofocus required>
+                                                    <label for="title" class="form-label mb-0">Valor</label>
+                                                    <input type="text" class="form-control" name="title" id="title" autofocus required>
+                                                </div>
+                                                <div class="col-md-9 mb-3">
+                                                    <label for="celular" class="form-label mb-0">Celular</label>
+                                                    <input type="text" class="form-control" name="celular" id="celular">
+                                                  <div class="col-md-9 mb-3">
+                                                    <label for="telefone_fixo" class="form-label mb-0">Telefone Fixo</label>
+                                                    <input type="text" class="form-control" name="telefone_fixo" id="telefone_fixo">
                                                   </div>
-                                                  <div class="col-sm-12 mb-2">
-                                                      <label for="description" class="form-label mb-0">Descrição do serviço</label>
-                                                      <div class="form">
-                                                          <textarea rows="3" class="form-control" name="description" id="description"></textarea>
-                                                      </div>
-                                                  </div>
+
                                                   <div class="col-sm-12 mb-2">
                                                     <div class="mb-3">
                                                         <button type="submit" class="btn btn-primary w-100 fs-5 fw-bold icon-link-hover">Enviar</button>
@@ -221,7 +243,7 @@
                                                           <textarea rows="3" class="form-control" name="description" id="description"></textarea>
                                                       </div>
                                                   </div>
-                                                                                                  <div class="col-sm-12 mb-2">
+                                                        <div class="col-sm-12 mb-2">
                                                     <div class="mb-3">
                                                         <button type="submit" class="btn btn-primary w-100 fs-5 fw-bold icon-link-hover">Enviar</button>
                                                       </div>
