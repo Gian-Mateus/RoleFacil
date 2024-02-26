@@ -6,8 +6,17 @@
     gap: 1rem;
     
     .card{
+        min-height: 350px;
         min-width: 16rem;
         margin: 1rem 0;
+        .card-text{
+            overflow: hidden;
+        }
+    }
+
+
+    .button-card{
+        bottom: 0.5rem;
     }
 }
 

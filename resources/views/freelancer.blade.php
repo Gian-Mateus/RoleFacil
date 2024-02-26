@@ -21,19 +21,18 @@
                 </label>
               </div>
               
+              {{-- filtro2 --}}
               <div class="form-check form-check-inline">
                 <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
                 <label class="form-check-label" for="flexCheckChecked">
                   Valor
                 </label>
               </div>
-              {{-- filtro2 --}}
-              
 
             </div>
 
             {{-- display de lista --}}
-            <div class="col-md-8">
+            <div class="col-md-8 freelancebox">
               <x-freelanceList aboutWhat="Zona"/>
               <x-freelanceList aboutWhat="Pirokada no Daniel"/>
               <x-freelanceList aboutWhat="Pub"/>

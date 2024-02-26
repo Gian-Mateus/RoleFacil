@@ -3,6 +3,7 @@
     <x-breadcrumb title="Restaurantes"/>
     @for ($i = 0; $i < 15; $i++)
         
-    <x-card-list/>
+        <x-card-list title="" text=""/>
+        
     @endfor
 @endsection
