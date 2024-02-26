@@ -72,7 +72,7 @@
                                                   </div>
                                                   <div class="col-sm-12 mb-2">
                                                     <label for="date" class="form-label mb-0">Data do evento</label>
-                                                    <x-date-picker/>
+                                                    <input type="date" class="form-control"  name=""  id="coupon_end" autofocus required>
                                                     </div>
                                                   <div class="col-sm-12 mb-2">
                                                     <div class="mb-3">
@@ -101,28 +101,62 @@
                                                       <label for="title" class="form-label mb-0">Título do Cupom</label>
                                                       <input type="text" class="form-control" name="title" id="title" autofocus required>
                                                   </div>
-                                                  <div class="col-sm-12 mb-2 d-flex">
-                                                    <div class="col-6 mt-2">
-                                                        <div class="form-check form-switch">
-                                                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
-                                                            <label class="form-check-label" for="flexSwitchCheckChecked">Limitado</label>
+                                                  <div class="col-sm-12">
+                                                    <label for="title" class="form-label mb-0">Prazo de validade:</label>
+                                                    <div class="row">
+                                                        <div class="col-6 mt-2">
+                                                            <label for="title" class="form-label mb-0">início</label>
+                                                            <input type="date" class="form-control" name="coupon_start" id="coupon_start" autofocus required>
+                                                        </div>
+                                                        <div class="col-6 mt-2">
+                                                            <label for="title" class="form-label mb-0">Final</label>
+                                                            <input type="date" class="form-control" name="coupon_end" id="coupon_end" autofocus required>
                                                         </div>
                                                     </div>
-                                                    <div class="col-sm-6 mt-2">
-                                                        <input type="text" class="form-control" name="zipcode" placeholder="Quantidade" id="zipcode" autofocus required>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-12 mb-2 d-flex">
+                                                        <div class="col-6 mt-3">
+                                                            <div class="form-check">
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                                    <label class="form-check-label" for="flexRadioDefault2">Limitado</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
-
-                                                  <div class="col-12 mb-2 form-check form-switch">
-                                                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
-                                                    <label class="form-check-label" for="flexSwitchCheckChecked">Todas as compras</label>
-                                                  </div>
+                                                <div class="row me-2">
+                                                    <div class="col-12 d-flex">
+                                                        <div class="col-6 mb-2 me-4">
+                                                            <label for="title" class="form-label mb-0">Tipo de cupom</label>
+                                                            <input type="text" class="form-control" name="title" placeholder="Escolha o tipo" id="title" autofocus required>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <label for="title" class="form-label mb-0">Valor do cupom</label>
+                                                            <input type="text" class="form-control" name="zipcode" id="zipcode" autofocus required>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                                 <div class="col-sm-12 mb-2">
-                                                    <label for="description" class="form-label mb-0">Produtos válidos</label>
+                                                    <label for="description" class="form-label mb-0">Descrição</label>
                                                     <div class="form">
                                                         <textarea rows="3" class="form-control" name="description" id="description"></textarea>
                                                     </div>
                                                 </div>
+                                                <div class="row me-2">
+                                                    <div class="col-12 d-flex">
+                                                        <div class="col-6 mb-2 me-4">
+                                                            <label for="title" class="form-label mb-0">Código do Cupom</label>
+                                                            <input type="text" class="form-control" name="title" id="title" autofocus required>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <label for="title" class="form-label mb-0">Quantidade</label>
+                                                            <input type="text" class="form-control" name="zipcode" id="zipcode" autofocus required>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
                                                 <div class="col-sm-12 mb-2">
                                                     <div class="mb-3">
                                                         <button type="submit" class="btn btn-primary w-100 fs-5 fw-bold icon-link-hover">Enviar</button>
