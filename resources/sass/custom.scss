@@ -65,9 +65,11 @@ $nav-tabs-link-active-bg: $orange-600;
 
 body{
     min-height: 100vh;
-    background-image: url("../../assets/assets-svg/background-role-facil.svg");
+    background-image: url("../../assets/assets-svg/background-role-facil.png");
     background-repeat: no-repeat;
     background-size: cover;
+
+
     display: flex;
     flex-direction: column;
     background-attachment: fixed;
@@ -99,8 +101,17 @@ body{
     padding: 2rem 0;
     border-radius: 1rem;
     text-align: center;
-    margin: 0 2vw 0 8vw;
+    // margin: 0 1vw 0 8vw;
+    //min-width: 16vw;
 }
+
+.carousel, .accordion{
+    box-shadow: 15px 15px 35px rgb(16, 16, 16);
+}
+.carouse-inner{
+    
+}
+
 
 // input[type="date"]:in-range::-webkit-datetime-edit-year-field,
 // input[type="date"]:in-range::-webkit-datetime-edit-month-field,

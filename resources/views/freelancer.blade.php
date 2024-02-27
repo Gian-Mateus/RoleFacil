@@ -11,9 +11,9 @@
           <div class="row">
             
             {{-- filtro1 --}}
-            <div class="col-md-2 mt-5 h-25  text-white filtro">
+            <div class="col-3 mt-5 h-25  text-white filtro">
+              <div class="title fw-semibold fs-2">Filtro</div>
               <div class="form-check form-check-inline">
-                <div class="title fw-semibold fs-2">Filtro</div>
                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                 <label class="form-check-label" for="flexCheckDefault">Distância</label>
               </div>
