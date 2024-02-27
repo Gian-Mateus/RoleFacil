@@ -64,11 +64,6 @@
 <div class="event-list-cards row">
 
     <x-eventListCard aboutWhat="Estabelecimentos" link="{{ route('estabelecimentos') }}">
-       {{--  @php
-            echo "<pre>";
-               print_r($imgEstab[0]);
-            echo "</pre>";
-        @endphp --}}
         @foreach( $establishment as $estab )
             @component('components.card', [
                 'img' => $estab["cli_establishment_seed_imgs"][0],
@@ -79,12 +74,12 @@
         @endforeach
     </x-eventListCard>
 
-{{--     <x-eventListCard aboutWhat="Restaurantes" link="{{ route('whatever') }}">
+    <x-eventListCard aboutWhat="Restaurantes" link="{{ route('whatever') }}">
         @foreach ($restaurants as $rest)
             @component('components.card', [
                 "img" => $rest["cli_establishment_seed_imgs"][0],
-                'title' => $rest["name"],
-                'text' => $rest["formatted_address"]
+                'title' => $rest["cli_establishment_seed_name"],
+                'text' => $rest["cli_establishment_seed_address_formatted"]
                 ])
             @endcomponent
         @endforeach
@@ -94,28 +89,22 @@
         @foreach ($bar as $b)
             @component('components.card', [
                 "img" => $b["cli_establishment_seed_imgs"][0],
-                'title' => $b["name"],
-                'text' => $b["formatted_address"]
+                'title' => $b["cli_establishment_seed_name"],
+                'text' => $b["cli_establishment_seed_address_formatted"]
                 ])
             @endcomponent
         @endforeach
-    </x-eventListCard> --}}
+    </x-eventListCard>
 
     <x-eventListCard aboutWhat="Padarias" link="1">
-        @php
-            echo "<pre>";
-                
-            echo "</pre>";
-        @endphp
-
-        {{-- @foreach ($bakery as $bak)
+        @foreach ($bakery as $bak)
             @component('components.card', [
                 "img" => $bak["cli_establishment_seed_imgs"][0],
-                'title' => $bak["name"],
-                'text' => $bak["formatted_address"]
+                'title' => $bak["cli_establishment_seed_name"],
+                'text' => $bak["cli_establishment_seed_address_formatted"]
                 ])
             @endcomponent
-        @endforeach --}}
+        @endforeach
     </x-eventListCard>
     
 </div>
