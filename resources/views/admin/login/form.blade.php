@@ -13,7 +13,7 @@
             <div class="alert alert-success">
                 {{ session()->get('msg') }}
             </div>
-        @endifg
+        @endif
         <div class="container vh-100">
             <div class="row justify-content-center align-items-center h-50">
                 <div class="container d-flex justify-content-center">
