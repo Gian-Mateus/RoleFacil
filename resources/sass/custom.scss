@@ -105,13 +105,13 @@ body{
 //     //min-width: 16vw;
 // }
 
-.carousel, .accordion{
+.carousel, .accordion, .card{
     box-shadow: 15px 15px 35px rgb(16, 16, 16);
 }
-.carouse-inner{
 
+.logo{
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
-
 
 // input[type="date"]:in-range::-webkit-datetime-edit-year-field,
 // input[type="date"]:in-range::-webkit-datetime-edit-month-field,

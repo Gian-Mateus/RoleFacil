@@ -2,18 +2,26 @@
 @section('content')
 <x-breadcrumb title="Freelancer" />
         <div class="text-center">
-          <h2 class="fw-medium fs-1">Lista de Freelances</h2>
+          <h2 class="fw-medium fs-1 titulo">Lista de Freelances</h2>
           <h3>Encontre aqui uma oportunidade de Freelance que se encaixe com seu perfil!</h3>
         </div>
 
         {{-- container de filtros --}}
         <div class="container">
           <div class="row">
-                <div class="col-sm-12 col-md-3 mt-5 h-25  text-white filtro">
+                <div class="col-sm-12 col-md-3 mt-5 text-white">
                 {{-- filtro1 --}}
                         <div class="title fw-semibold fs-2">Filtro</div>
-                        <label for="pagamento" class="fs-4">Pagamento</label>
                         
+                        <select class="form-select form-select-sm" aria-label="Selecione uma categoria">
+                          <option selected>Categoria</option>
+                          <option value="1">Bartender</option>
+                          <option value="2">Garçom</option>
+                          <option value="3">Atendente</option>
+                          <option value="4">Limpeza</option>
+                        </select>
+                        
+                        <label for="pagamento" class="fs-4">Pagamento</label>
                         <div class="form-check">
                           <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
                           <label class="form-check-label" for="flexRadioDefault1">
@@ -47,7 +55,7 @@
 
                         {{-- select cidades --}}
                         <div class="select-city">
-                        <label class="fs-3 mb-2">Localização:</label>
+                        <label class="fs-4 mb-2">Localização:</label>
                             <form action="#">
                                 <p>
                                 <Label for="estado">Estado</Label>
