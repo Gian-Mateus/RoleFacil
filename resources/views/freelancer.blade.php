@@ -12,15 +12,37 @@
                 <div class="col-sm-12 col-md-3 mt-5 h-25  text-white filtro">
                 {{-- filtro1 --}}
                         <div class="title fw-semibold fs-2">Filtro</div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">Distância</label>
+                        <label for="pagamento" class="fs-4">Pagamento</label>
+                        
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                          <label class="form-check-label" for="flexRadioDefault1">
+                            R$10 até R$50
+                          </label>
                         </div>
-
-                        {{-- filtro2 --}}
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                            <label class="form-check-label" for="flexCheckChecked">Valor</label>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                          <label class="form-check-label" for="flexRadioDefault2">
+                            R$51 até R$100
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" checked>
+                          <label class="form-check-label" for="flexRadioDefault3">
+                            R$101 até R$150
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" checked>
+                          <label class="form-check-label" for="flexRadioDefault4">
+                            R$151 até R$200
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault5" checked>
+                          <label class="form-check-label" for="flexRadioDefault5">
+                            A combinar
+                          </label>
                         </div>
 
                         {{-- select cidades --}}
