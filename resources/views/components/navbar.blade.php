@@ -27,7 +27,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/estabelecimento">
+                <a class="nav-link" href="/estabelecimentos">
                     <div class="icon">
                         <x-svg.roles/>
                     </div>

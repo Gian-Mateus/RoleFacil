@@ -1,5 +1,7 @@
 {{-- <button type="button" class="botaoMsg" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="seuemail@email.com">Contato</button> --}}
 
+
+
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -26,7 +28,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-            <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Enviar</button>
+            <button type="submit" class="btn btn-primary"  data-bs-dismiss="modal" onclick="limpar"()>Enviar</button>
           </div>
         </form>
       </div>

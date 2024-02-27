@@ -16,7 +16,7 @@ class eventListCard extends Component
         public string $aboutWhat,
     )
     {
-        
+
     }
 
     /**
