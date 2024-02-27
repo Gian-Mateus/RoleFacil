@@ -59,7 +59,7 @@
                             <form action="#">
                                 <p>
                                 <Label for="estado">Estado</Label>
-                                <select name="estado" id="estado">
+                                <select name="estado" id="estado" class="form-select form-select-sm">
                                     <option value="">Selecione</option>
                                     <option value="AC">Acre</option>
                                     <option value="AL">Alagoas</option>
@@ -94,7 +94,7 @@
                             </form>
                     </div>
                         <label for="cidade">Cidade</label>
-                        <select name="cidade" id="cidade">
+                        <select name="cidade" id="cidade" class="form-select form-select-sm">
                         <option value="">Selecione</option>
                         </select>
                 </div>
