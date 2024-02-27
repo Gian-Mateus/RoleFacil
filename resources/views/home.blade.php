@@ -6,7 +6,7 @@
 
 <script src='https://unpkg.com/@turf/turf@6/turf.min.js'></script>
 <script>
-    
+
     var users = {{ Illuminate\Support\Js::from($users) }};
     async function obterLocalizacao() {
         const user_location = new Promise((resolve) => {
@@ -42,7 +42,7 @@
 </script>
 
 @extends('layout')
-@section('content')   
+@section('content')
 
 <x-filters.offcanvas/>
 <button class="btn btn-primary ms-2 mt-2 border" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasFilters"
@@ -74,7 +74,7 @@
         @endforeach
     </x-eventListCard>
 
-    <x-eventListCard aboutWhat="Restaurantes" link="{{ route('whatever') }}">
+    <x-eventListCard aboutWhat="Restaurantes">
         @foreach ($restaurants as $rest)
             @component('components.card', [
                 "img" => $rest["cli_establishment_seed_imgs"][0],
@@ -106,7 +106,7 @@
             @endcomponent
         @endforeach
     </x-eventListCard>
-    
+
 </div>
 
 @endsection

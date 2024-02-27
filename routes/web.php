@@ -47,9 +47,6 @@ Route::get('/estabelecimentos', function () {
     return view("list");
 })->name("estabelecimentos");
 
-// Route::get('/{whatever?}', function () {
-//     return view("list");
-// })->name("whatever");
 
 Route::get('/evento', function () {
     return view("event");

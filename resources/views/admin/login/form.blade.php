@@ -25,7 +25,7 @@
                             <h5 class="card-title fs-4 fw-bold">Faça o Login</h5>
                         </div>
                         <div class="card-body">
-                            <form class="row g-1" action="{{ route('login.auth') }}" method="POST">
+                            <form class="row g-1" action="{{route('login.auth') }}" method="POST">
                                 @csrf
                                 <div class="col-md-12 mb-2">
                                     <label for="email" class="form-label  mb-0">E-mail</label>
