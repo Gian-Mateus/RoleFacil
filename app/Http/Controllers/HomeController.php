@@ -2,53 +2,34 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\CliEstablishmentSeed;
 use App\Models\User;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     public function index() {
-        // $users = User::all();
-        // return view('home')->with('users', json_decode($users, true));
-        
-        $json = file_get_contents('../details_places/db_addressAlter.json');
-        $data = json_decode($json, true);
-        $users = $data["results"];
-        // $folder_images = preg_replace('/[^a-zA-Z0-9]/', '_', $input);
-
-        // Random Establishment
-        $establishment = [];
-        for( $i = 0 ; $i < 10; $i++ ){
-            array_push($establishment , $users[rand(0, count($users)-1)]);
+        $users = CliEstablishmentSeed::all();
+        $random10 = CliEstablishmentSeed::inRandomOrder()->take(10)->pluck('cli_establishment_seed_id');
+        $establishment = CliEstablishmentSeed::whereIn('cli_establishment_seed_id', $random10)->get();
+        $imgEstab = [];
+        foreach($establishment as $estab){
+            $estab["cli_establishment_seed_imgs"] = explode(";", $estab["cli_establishment_seed_imgs"]);
         }
-
-        // Filter Bakerys (padarias)
-        $bakery = [];
-        foreach($users as $user){
-            if(in_array("bakery", $user["types"])){
-                array_push($bakery,$user);
-            }
-        }
-
-        // Filter Restaurants 
-        $restaurants = [];
-        foreach($users as $user){
-            if(in_array("restaurant", $user["types"])){
-                array_push($restaurants,$user);
-            }
-        }
-
-        // Filter Bar 
-        $bar = [];
-        foreach($users as $user){
-            if(in_array("bar", $user["types"])){
-                array_push($bar,$user);
-            }
-        }
+        $bakery = CliEstablishmentSeed::where([
+            ["cli_establishment_seed_categories", "like", "%bakery%"]
+        ])->take(10)->get();
+        $restaurants = CliEstablishmentSeed::where([
+            ["cli_establishment_seed_categories", "like", "%restaurant%"]
+        ])->take(10)->get();
+        $bar = CliEstablishmentSeed::where([
+            ["cli_establishment_seed_categories", "like", "%bar%"]
+        ])->take(10)->get();
 
         return view('home', [
             'users' => $users,
             'establishment' => $establishment,
+            'imgEstab' => $imgEstab,
             'bakery' => $bakery,
             'restaurants' => $restaurants,
             'bar' => $bar,

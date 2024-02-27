@@ -207,8 +207,8 @@
                                         </form>
                                     </div>
                                 </div>
-                            </div>
-                                                </div>
+                                </div>
+
                                                     <div class="accordion-item">
                                                         <h2 class="accordion-header">
                                                             <button class="accordion-button fs-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Cadastrar Eventos</button>
@@ -355,119 +355,103 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="accordion-item">
-                                                        <h2 class="accordion-header">
-                                                            <button class="accordion-button fs-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">Cadastrar Freelancer</button>
-                                                        </h2>
-                                                        <div id="collapseFour" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                                                            <div class="accordion-body">
-                                                                <form action="" method="post">
-                                                                @csrf
-                                                                    <div class="col-sm-12 mb-2">
-                                                                        <label for="freelancer_title" class="form-label mb-0">Título de serviço</label>
-                                                                        <input type="text" class="form-control" name="freelancer_title" id="freelancer_title" autofocus required>
-                                                                    </div>
-                                                                    <div class="col-sm-12 mb-2">
-                                                                    <label for="description" class="form-label mb-0">Descrição do serviço</label>
-                                                                    <div class="form">
-                                                                        <textarea rows="3" class="form-control" name="description" id="description"></textarea>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row mb-3">
-                                                                    <div class="col-6 mt-2">
-                                                                        <label for="title" class="form-label mb-0">Início</label>
-                                                                        <input type="date" class="form-control" name="coupon_start" id="coupon_start" autofocus required>
-                                                                    </div>
-                                                                    <div class="col-6 mt-2">
-                                                                        <label for="title" class="form-label mb-0">Final</label>
-                                                                        <input type="date" class="form-control" name="coupon_end" id="coupon_end" autofocus required>
-                                                                    </div>
-                                                                </div>
-                                                                    <div class="col-sm-12 mb-2">
-                                                                        <label for="title" class="form-label mb-0">Email de contato</label>
-                                                                        <input type="text" class="form-control" name="title" id="title" autofocus required>
-
-                                                                    <div class="col-sm-12 mb-2">
-                                                                        <label for="freelancer_email" class="form-label mb-0">Email de contato</label>
-                                                                        <input type="text" class="form-control" name="freelancer_email" id="freelancer_email" autofocus required>
-                                                                    </div>
-                                                                    <div class="col-sm-12 mb-2">
-                                                                        <label for="freelancer_money" class="form-label mb-0">Valor</label>
-                                                                        <input type="text" class="form-control" name="freelancer_money" id="freelancer_money" autofocus required>
-
-                                                                    </div>
-                                                                    <div class="col-sm-12 mb-2">
-                                                                    <label for="title" class="form-label mb-0">Valor</label>
-                                                                    <input type="text" class="form-control" name="title" id="title" autofocus required>
-                                                                </div>
-                                                                <div class="col-md-9 mb-3">
-                                                                    <label for="celular" class="form-label mb-0">Celular</label>
-                                                                    <input type="text" class="form-control" name="celular" id="celular">
-                                                                    <div class="col-md-9 mb-3">
-
-                                                                    <label for="telefone_fixo" class="form-label mb-0">Telefone Fixo</label>
-                                                                    <input type="text" class="form-control" name="telefone_fixo" id="telefone_fixo">
-                                                                    </div>
-
-                                                                        <label for="freelancer_phone" class="form-label mb-0">Celular</label>
-                                                                        <input type="text" class="form-control" name="freelancer_phone" id="freelancer_phone">
-                                                                    <div class="col-md-9 mb-3">
-                                                                        <label for="freelancer_telefone_fixo" class="form-label mb-0">Telefone Fixo</label>
-                                                                        <input type="text" class="form-control" name="freelancer_telefone_fixo" id="freelancer_telefone_fixo">
-                                                                    </div>
-
-
-                                                                    <div class="col-sm-12 mb-2">
-                                                                    <div class="mb-3">
-                                                                        <button type="submit" class="btn btn-primary w-100 fs-5 fw-bold icon-link-hover">Enviar</button>
-                                                                        </div>
-                                                                </div>
-                                                                </form>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="accordion-item">
-                                                        <h2 class="accordion-header">
-                                                            <button class="accordion-button fs-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">Horário de funcionamento</button>
-                                                        </h2>
-                                                        <div id="collapseFive" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                                                            <div class="accordion-body">
-                                                                <form action="" method="post">
-                                                                @csrf
-                                                                    <div class="col-sm-12 mb-2">
-                                                                    <div class="col mb-2">
-                                                                        <label for="password" class="form-label mb-0">Data2</label>
-                                                                        <x-date-picker-range/>
-                                                                    </div>
-                                                                    </div>
-                                                                    <div class="col-sm-12 mb-2">
-                                                                        <label for="title" class="form-label mb-0">Tipo de serviço</label>
-                                                                        <input type="text" class="form-control" name="title" id="title" autofocus required>
-                                                                    </div>
-                                                                    <div class="col-sm-12 mb-2">
-                                                                        <label for="description" class="form-label mb-0">Descrição do serviço</label>
-                                                                        <div class="form">
-                                                                            <textarea rows="3" class="form-control" name="description" id="description"></textarea>
-                                                                        </div>
-                                                                    </div>
-                                                                        <div class="col-sm-12 mb-2">
-                                                                    <div class="mb-3">
-                                                                        <button type="submit" class="btn btn-primary w-100 fs-5 fw-bold icon-link-hover">Enviar</button>
-                                                                        </div>
-                                                                </div>
-                                                                </form>
-                                                            </div>
-                                                        </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button fs-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">Cadastrar Freelancer</button>
+                                    </h2>
+                                    <div id="collapseFour" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <form action="" method="post">
+                                            @csrf
+                                                <div class="col-sm-12 mb-2">
+                                                    <label for="freelancer_title" class="form-label mb-0">Título de serviço</label>
+                                                    <input type="text" class="form-control" name="freelancer_title" id="freelancer_title" autofocus required>
+                                                </div>
+                                                <div class="col-sm-12 mb-2">
+                                                    <label for="description" class="form-label mb-0">Descrição do serviço</label>
+                                                    <div class="form">
+                                                        <textarea rows="3" class="form-control" name="description" id="description"></textarea>
                                                     </div>
                                                 </div>
-                                            </div>
-                 </div>
+                                                <div class="row mb-3">
+                                                    <div class="col-6 mt-2">
+                                                        <label for="title" class="form-label mb-0">Início</label>
+                                                        <input type="date" class="form-control" name="coupon_start" id="coupon_start" autofocus required>
+                                                    </div>
+                                                    <div class="col-6 mt-2">
+                                                        <label for="title" class="form-label mb-0">Final</label>
+                                                        <input type="date" class="form-control" name="coupon_end" id="coupon_end" autofocus required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 mb-2">
+                                                    <label for="freelancer_email" class="form-label mb-0">Email de contato</label>
+                                                    <input type="text" class="form-control" name="freelancer_email" id="freelancer_email" autofocus required>
+                                                </div>
+                                                <div class="col-sm-12 mb-2">
+                                                    <label for="freelancer_money" class="form-label mb-0">Valor</label>
+                                                    <input type="text" class="form-control" name="freelancer_money" id="freelancer_money" autofocus required>
+                                                </div>
+                                                <div class="col mb-3">
+                                                    <label for="freelancer_phone" class="form-label mb-0">Fone/Whats</label>
+                                                    <input type="text" class="form-control" name="freelancer_phone" placeholder="(DDD)00000-0000" id="freelancer_phone">
+                                                </div>
+                                                <div class="col-sm-12 mb-2">
+                                                <div class="mb-3">
+                                                    <button type="submit" class="btn btn-primary w-100 fs-5 fw-bold icon-link-hover">Enviar</button>
+                                                </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button fs-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">Horário de funcionamento</button>
+                                    </h2>
+                                    <div id="collapseFive" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <form action="" method="post">
+                                            @csrf
+                                                <div class="row mb-3">
+                                                    <label for="description" class="form-label mb-0"></label>
+                                                    <div class="col-6 mt-2">
+                                                        <label for="title" class="form-label mb-0">Início</label>
+                                                        <input type="date" class="form-control" name="coupon_start" id="coupon_start" autofocus required>
+                                                    </div>
+                                                    <div class="col-6 mt-2">
+                                                        <label for="title" class="form-label mb-0">Final</label>
+                                                        <input type="date" class="form-control" name="coupon_end" id="coupon_end" autofocus required>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-12 mb-2">
+                                                        <label for="appt" class="me-2">Das</label>
+                                                        <input type="time" class="me-2" id="appt" name="appt" min="09:00" max="18:00" required/>
+                                                        <label for="appt" class="me-2">às</label>
+                                                        <input type="time" class="me-2" id="appt" name="appt" min="09:00" max="18:00" required/>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 mb-2">
+                                                    <label for="description" class="form-label mb-0">Observações</label>
+                                                    <div class="form">
+                                                        <textarea rows="3" class="form-control" name="description" id="description"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 mb-2">
+                                                    <div class="mb-3">
+                                                        <button type="submit" class="btn btn-primary w-100 fs-5 fw-bold icon-link-hover">Enviar</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                </div>
-                </div>
-            </div>
-            </div>
             </div>
         </div>
     </div>
+
 @endsection

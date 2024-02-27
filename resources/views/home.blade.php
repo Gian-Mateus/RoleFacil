@@ -64,16 +64,22 @@
 <div class="event-list-cards row">
 
     <x-eventListCard aboutWhat="Estabelecimentos" link="{{ route('estabelecimentos') }}">
+       {{--  @php
+            echo "<pre>";
+               print_r($imgEstab[0]);
+            echo "</pre>";
+        @endphp --}}
         @foreach( $establishment as $estab )
             @component('components.card', [
-                'title' => $estab["name"],
-                'text' => $estab["formatted_address"]
+                'img' => $estab["cli_establishment_seed_imgs"][0],
+                'title' => $estab["cli_establishment_seed_name"],
+                'text' => $estab["cli_establishment_seed_address_formatted"]
                 ])
             @endcomponent
         @endforeach
     </x-eventListCard>
 
-    <x-eventListCard aboutWhat="Restaurantes" link="{{ route('whatever') }}">
+    {{-- <x-eventListCard aboutWhat="Restaurantes" link="{{ route('whatever') }}">
         @for ($i = 0 ; $i <= 10; $i++ )
             @component('components.card', [
                 'title' => $restaurants[$i]["name"],
@@ -101,7 +107,7 @@
                 ])
             @endcomponent
         @endfor
-    </x-eventListCard>
+    </x-eventListCard> --}}
     
 </div>
 
