@@ -62,20 +62,51 @@
 </div>
 
 <div class="event-list-cards row">
-    <x-eventListCard aboutWhat="Locais">
 
-        {{-- @for ($i = 0 ; $i <= 10; $i++ ) --}}
-            <x-card title="{{ $users[0]["name"] }}"/>
-        {{-- @endfor --}}
-
+    <x-eventListCard aboutWhat="Estabelecimentos" link="{{ route('estabelecimentos') }}">
+        @foreach( $establishment as $estab )
+            @component('components.card', [
+                'img' => $estab["cli_establishment_seed_imgs"][0],
+                'title' => $estab["cli_establishment_seed_name"],
+                'text' => $estab["cli_establishment_seed_address_formatted"]
+                ])
+            @endcomponent
+        @endforeach
     </x-eventListCard>
 
-    {{-- <x-card title="Mais proximos eventos"/> --}}
+    <x-eventListCard aboutWhat="Restaurantes" link="{{ route('whatever') }}">
+        @foreach ($restaurants as $rest)
+            @component('components.card', [
+                "img" => $rest["cli_establishment_seed_imgs"][0],
+                'title' => $rest["cli_establishment_seed_name"],
+                'text' => $rest["cli_establishment_seed_address_formatted"]
+                ])
+            @endcomponent
+        @endforeach
+    </x-eventListCard>
 
-    {{-- <x-eventListCard aboutWhat="Pertos de você"/>
-    <x-eventListCard aboutWhat="Restaurantes"/>
-    <x-eventListCard aboutWhat="Pubs"/>
-    <x-eventListCard aboutWhat="Bar"/> --}}
+    <x-eventListCard aboutWhat="Bares" link="1">
+        @foreach ($bar as $b)
+            @component('components.card', [
+                "img" => $b["cli_establishment_seed_imgs"][0],
+                'title' => $b["cli_establishment_seed_name"],
+                'text' => $b["cli_establishment_seed_address_formatted"]
+                ])
+            @endcomponent
+        @endforeach
+    </x-eventListCard>
+
+    <x-eventListCard aboutWhat="Padarias" link="1">
+        @foreach ($bakery as $bak)
+            @component('components.card', [
+                "img" => $bak["cli_establishment_seed_imgs"][0],
+                'title' => $bak["cli_establishment_seed_name"],
+                'text' => $bak["cli_establishment_seed_address_formatted"]
+                ])
+            @endcomponent
+        @endforeach
+    </x-eventListCard>
+    
 </div>
 
 @endsection

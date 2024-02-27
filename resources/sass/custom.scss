@@ -96,9 +96,10 @@ body{
 
 .filtro{
     background-color: $body-bg;
-    padding: 0.4rem 0 4rem 0;
+    padding: 2rem 0;
     border-radius: 1rem;
     text-align: center;
+    margin: 0 2vw 0 8vw;
 }
 
 // input[type="date"]:in-range::-webkit-datetime-edit-year-field,
@@ -124,7 +125,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         background-color: $body-bg;
         border-radius: 1rem;
         text-align: center;
+        margin: 0;
     }
-    
+
 }
 

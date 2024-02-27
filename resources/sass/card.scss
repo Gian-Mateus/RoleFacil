@@ -6,8 +6,23 @@
     gap: 1rem;
     
     .card{
+        min-height: 350px;
         min-width: 16rem;
         margin: 1rem 0;
+        .card-text{
+            overflow: hidden;
+        }
+        img{
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+        }
+    }
+
+
+    .button-card{
+        bottom: 0.5rem;
     }
 }
 

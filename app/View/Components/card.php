@@ -13,7 +13,8 @@ class card extends Component
      */
     public function __construct(
         public $title,
-        
+        public $text,
+        public $img
     )
     {
         //

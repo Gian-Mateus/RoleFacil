@@ -43,13 +43,14 @@ Route::get('/events', [EventController::class, 'index']);
 
 /* Rotas para estilização e criação das views */
 
-Route::get('/estabelecimento', function () {
-    return view("establishment");
-});
-
 Route::get('/estabelecimentos', function () {
     return view("list");
-});
+})->name("estabelecimentos");
+
+Route::get('/{whatever?}', function () {
+    return view("list");
+})->name("whatever");
+
 Route::get('/evento', function () {
     return view("event");
 });
@@ -57,5 +58,8 @@ Route::get('/evento', function () {
 /* Rota para login e registro */
 
 Route::get('/client', function () {
-    return view("admin.client");
+    return view("client");
 });
+
+
+
