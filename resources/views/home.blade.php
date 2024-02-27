@@ -44,6 +44,11 @@
 @extends('layout')
 @section('content')
 
+<div class="title text-center">
+    <h1>Aqui você encontra o melhor rolê, feito para você</h1>
+    <h2>Do jeitinho que você gosta</h2>
+</div>
+
 <x-filters.offcanvas/>
 <button class="btn btn-primary ms-2 mt-2 border" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasFilters"
     aria-controls="offcanvasFilters" id="collapse-settings">

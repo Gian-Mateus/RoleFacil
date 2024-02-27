@@ -2,8 +2,9 @@
     @csrf
     <div class="accordion">
         <div class="accordion-item">
+            <h2 class="text-center mt-2">Filtros</h2>
             <h2 class="accordion-header d-flex justify-content-between">
-                <span class="distance-filter">
+                <span class="distance-filter fs-4">
                     Distância
                 </span>
                 <span class="pt-2 pe-2">
