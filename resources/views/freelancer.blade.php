@@ -104,9 +104,10 @@
 
                 {{-- display de lista --}}
                 <div class="col-sm-12 col-md-9 freelancebox">
-                    <x-freelanceList aboutWhat="Zona"/>
-                    <x-freelanceList aboutWhat="Pirokada no Daniel"/>
-                    <x-freelanceList aboutWhat="Pub"/>
+                    <x-freelanceList aboutWhat="Bartender"/>
+                    <x-freelanceList aboutWhat="Garçom"/>
+                    <x-freelanceList aboutWhat="Atendimento"/>
+                    <x-freelanceList aboutWhat="Limpeza"/>
                 </div>
             </div>
         </div>
