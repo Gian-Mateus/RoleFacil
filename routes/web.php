@@ -7,6 +7,7 @@ use App\Http\Controllers\EventController;
 use App\Http\Controllers\admin\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\FreelancerController;
+use App\Http\Controllers\SearchController;
 use Illuminate\Auth\Events\Login;
 
 /* Rotas para login e registro */
@@ -28,18 +29,21 @@ Route::get('/freelancer', [FreelancerController::class, 'index']);
 
 /* Middleware para proteção de rotas (Só poderá acessar se estiver logado) */
 Route::middleware("validaLogin")->group(function(){
-
+    
     /* Rotas para eventos */
-
+    
     Route::get('/events/create', [EventController::class, 'create']);
     Route::get('/events/edit/{id}', [EventController::class, 'edit']);
     Route::post('/events', [EventController::class, 'store']);
     Route::put('/events/update/{id}', [EventController::class, 'update']);
     Route::delete('/events/{id}', [EventController::class, 'destroy']);
-
+    
 });
 
 Route::get('/events', [EventController::class, 'index']);
+
+Route::get('/pesquisa', [SearchController::class, 'index']);
+Route::post('/pesquisa', [SearchController::class, 'store']);
 
 /* Rotas para estilização e criação das views */
 
