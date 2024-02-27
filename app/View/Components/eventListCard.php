@@ -14,7 +14,6 @@ class eventListCard extends Component
 
     public function __construct(
         public string $aboutWhat,
-        public $link
     )
     {
         

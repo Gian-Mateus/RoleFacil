@@ -74,7 +74,7 @@
         @endforeach
     </x-eventListCard>
 
-    <x-eventListCard aboutWhat="Restaurantes" link="{{ route('whatever') }}">
+    <x-eventListCard aboutWhat="Restaurantes">
         @foreach ($restaurants as $rest)
             @component('components.card', [
                 "img" => $rest["cli_establishment_seed_imgs"][0],
