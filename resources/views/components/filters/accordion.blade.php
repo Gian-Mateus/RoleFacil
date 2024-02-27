@@ -29,9 +29,9 @@
             <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFilter">
                 <div class="accordion-body">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="bar">
+                        <input class="form-check-input" type="checkbox" value="" id="restaurante">
                         <label class="form-check-label" for="bar">
-                            Bar
+                            Restaurante
                         </label>
                     </div>
                     <div class="form-check">
@@ -41,9 +41,27 @@
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="bar">
+                        <input class="form-check-input" type="checkbox" value="" id="padaria">
                         <label class="form-check-label" for="bar">
-                            Bar
+                            Padaria
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="padaria">
+                        <label class="form-check-label" for="bar">
+                            Sorveteria
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="eventos">
+                        <label class="form-check-label" for="bar">
+                            Eventos
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="pontoturistico">
+                        <label class="form-check-label" for="bar">
+                            Pontos Turísticos
                         </label>
                     </div>
                 </div>
