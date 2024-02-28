@@ -2,8 +2,9 @@
     @csrf
     <div class="accordion">
         <div class="accordion-item">
+            <h2 class="text-center mt-2">Filtros</h2>
             <h2 class="accordion-header d-flex justify-content-between">
-                <span class="distance-filter">
+                <span class="distance-filter fs-4">
                     Distância
                 </span>
                 <span class="pt-2 pe-2">
@@ -29,12 +30,39 @@
             <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFilter">
                 <div class="accordion-body">
                     <div class="form-check">
-                        @php
-                            
-                        @endphp
+                        <input class="form-check-input" type="checkbox" value="" id="restaurante">
+                        <label class="form-check-label" for="bar">
+                            Restaurante
+                        </label>
+                    </div>
+                    <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="bar">
                         <label class="form-check-label" for="bar">
                             Bar
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="padaria">
+                        <label class="form-check-label" for="bar">
+                            Padaria
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="padaria">
+                        <label class="form-check-label" for="bar">
+                            Sorveteria
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="eventos">
+                        <label class="form-check-label" for="bar">
+                            Eventos
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="pontoturistico">
+                        <label class="form-check-label" for="bar">
+                            Pontos Turísticos
                         </label>
                     </div>
                 </div>

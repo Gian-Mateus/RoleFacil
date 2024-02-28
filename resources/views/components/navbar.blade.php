@@ -3,9 +3,10 @@
         <a class="navbar-brand" href="{{ route('home') }}">
             <x-svg.logo width="6rem" height="6rem"/>
         </a>
-        <form class="d-flex form-search" role="search">
+        <form class="d-flex form-search" role="search" method="POST" action="/pesquisa">
+            @csrf
             <div class="input-group">
-                <input class="form-control" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+                <input class="form-control" name="search" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
                 <button class="input-group-text" type="submit">
                     <x-svg.search/>
                 </button>

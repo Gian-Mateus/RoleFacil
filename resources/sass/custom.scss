@@ -93,23 +93,31 @@ body{
     margin: 0 auto;
 }
 
-.freelance-list{
-    margin-bottom: 3rem;
+// testando
+.accordion{
+    max-width: 18rem;
+    margin-left: 5%;
+}
+.form-select{
+    max-width: 10rem;
 }
 
-.filtro{
-    background-color: $body-bg;
-    padding: 2rem 0;
-    border-radius: 1rem;
-    text-align: center;
-    // margin: 0 1vw 0 8vw;
-    //min-width: 16vw;
-}
+// .filtro{
+//     background-color: $body-bg;
+//     padding: 2rem 0;
+//     border-radius: 1rem;
+//     text-align: center;
+//     // margin: 0 1vw 0 8vw;
+//     //min-width: 16vw;
+// }
 
-.carousel, .accordion{
+.carousel, .accordion, .card{
     box-shadow: 15px 15px 35px rgb(16, 16, 16);
 }
 
+.logo{
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+}
 
 // input[type="date"]:in-range::-webkit-datetime-edit-year-field,
 // input[type="date"]:in-range::-webkit-datetime-edit-month-field,
@@ -129,12 +137,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
             visibility: hidden;
         }
     }
-
-    .filtro{
-        background-color: $body-bg;
-        border-radius: 1rem;
-        text-align: center;
-        margin: 0;
+    .titlehome{
+        margin: 4rem 0 0 0;
     }
 
 }

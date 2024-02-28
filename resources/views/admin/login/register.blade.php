@@ -27,15 +27,20 @@
                                 <div class="col-md-12 mb-2">
                                   <label for="email" class="form-label mb-0">Email</label>
                                   <input type="text" class="form-control" name="email" id="email" autofocus required>
+                                  <i class="fa fa-user text-danger"></i>
                                 </div>
-                                <div class="col-md-12 mb-2">
+
+                              {{-- Aqui será para criar a senha da empresa --}}
+                                <div class="col-md-6 mb-2">
                                   <label for="password" class="form-label mb-0">Senha</label>
-                                  <input type="text" class="form-control" name="password" id="password" autofocus required>
+                                  <input type="password" class="form-control" name="password" id="password" autofocus required>
                                 </div>
-                                <div class="col-md-12 mb-2">
+                                <div class="col-md-6 mb-2">
                                   <label for="repeatpassword" class="form-label mb-0">Repetir senha</label>
-                                  <input type="text" class="form-control" name="repeatpassword" id="repeatpassword" autofocus required>
+                                  <input type="password" class="form-control" name="repeatpassword" id="repeatpassword" autofocus required>
                                 </div>
+
+                                {{-- Nome da empresa --}}
                                 <div class="col-md-12 mb-2">
                                   <label for="name" class="form-label mb-0">Nome</label>
                                   <input type="text" class="form-control" name="name" id="name" autofocus required>
@@ -44,48 +49,13 @@
                                   <label for="cnpj" class="form-label mb-0">Cnpj</label>
                                   <input type="text" class="form-control" name="cnpj" id="cnpj" required>
                                 </div>
-                                <div class="col-md-6 mb-2">
-                                  <label for="zipcode" class="form-label mb-0">Número</label>
-                                  <input type="text" class="form-control" name="zipcode" id="zipcode" required>
-                                </div>
-                                <div class="col-md-6 mb-2">
-                                    <label for="complement" class="form-label mb-0">Complemento</label>
-                                    <input type="text" class="form-control" name="complement" id="complement" required>
-                                </div>
-                                <div class="col-md-6 mb-2">
-                                  <label for="address" class="form-label mb-0">Rua</label>
-                                  <input type="text" class="form-control" name="address" id="address" required>
-                                </div>
-                                <div class="col-md-6 mb-2">
-                                  <label for="number_address" class="form-label mb-0">Número Rua</label>
-                                  <input type="text" class="form-control" name="number_address" id="number_address" required>
-                                </div>
-                                <div class="col-md-6 mb-2">
-                                  <label for="city" class="form-label mb-0">Cidade</label>
-                                  <input type="text" class="form-control" name="city" id="city" required>
-                                </div>
-                                <div class="col-md-6 mb-2">
-                                  <label for="neighborhood" class="form-label mb-0">Bairro</label>
-                                  <input type="text" class="form-control" name="neighborhood" id="neighborhood" required>
-                                </div>
-                                <div class="col-md-12 mb-2">
-                                  <label for="uf" class="form-label mb-0">Estado</label>
-                                  <input type="text" class="form-control" name="uf" id="uf" required>
-                                </div>
-                                <div class="col-md-9 mb-3">
-                                  <label for="celular" class="form-label mb-0">Celular</label>
-                                  <input type="text" class="form-control" name="celular" id="celular">
-                                <div class="col-md-9 mb-3">
-                                  <label for="telefone_fixo" class="form-label mb-0">Telefone Fixo</label>
-                                  <input type="text" class="form-control" name="telefone_fixo" id="telefone_fixo">
-                                </div>
                                 <div class="col-md-6 text-start">
                                   <x-filters.modal-privacy/>
                                 </div>
-                                <div class="col-md-6 text-start">
+                                <div class="col-md-6 text-start"> {{-- termos de uso --}}
                                   <x-filters.modal-user/>
                                 </div>
-                                <div class="col-12 mb-3">
+                                <div class="col-12 mb-3"> {{-- politicas de privacidade --}}
                                   <button type="submit" class="btn btn-primary w-100 fs-5 fw-bold icon-link-hover">Registrar-se</button>
                                 </div>
                                 <div class="col-md-12 text-center mb-3">

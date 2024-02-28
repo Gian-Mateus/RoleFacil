@@ -9,6 +9,7 @@ use App\Http\Controllers\EstablishmentController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\FreelancerController;
 use App\Http\Controllers\ListController;
+use App\Http\Controllers\SearchController;
 use Illuminate\Auth\Events\Login;
 
 /* Rotas para login e registro */
@@ -30,20 +31,23 @@ Route::get('/freelancer', [FreelancerController::class, 'index']);
 
 /* Middleware para proteção de rotas (Só poderá acessar se estiver logado) */
 Route::middleware("validaLogin")->group(function(){
-
+    
     /* Rotas para eventos */
-
+    
     Route::get('/events/create', [EventController::class, 'create']);
     Route::get('/events/edit/{id}', [EventController::class, 'edit']);
     Route::post('/events', [EventController::class, 'store']);
     Route::put('/events/update/{id}', [EventController::class, 'update']);
     Route::delete('/events/{id}', [EventController::class, 'destroy']);
-
+    
 });
 
 Route::get('/events', [EventController::class, 'index']);
 
-/* Rotas Acessos comuns */
+Route::get('/pesquisa', [SearchController::class, 'index']);
+Route::post('/pesquisa', [SearchController::class, 'store']);
+
+/* Rotas de Acessos comuns */
 
 Route::get('/role/{establishment:cli_establishment_seed_id}', [EstablishmentController::class, 'show'])->name("role");
 
@@ -60,6 +64,3 @@ Route::get('/evento', function () {
 Route::get('/client', function () {
     return view("client");
 });
-
-
-

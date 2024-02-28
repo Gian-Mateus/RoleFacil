@@ -13,11 +13,11 @@
             <div class="alert alert-success">
                 {{ session()->get('msg') }}
             </div>
-        @endifg
+        @endif
         <div class="container vh-100">
             <div class="row justify-content-center align-items-center h-50">
                 <div class="container d-flex justify-content-center">
-                    <a href="/"><x-svg.logo width="25rem" height="25rem"/></a>
+                    <a href="/" class="logo"><x-svg.logo width="20rem" height="20rem"/></a>
                 </div>
                 <div class="col col-sm-12 col-md-6">
                     <div class="card">
@@ -25,7 +25,7 @@
                             <h5 class="card-title fs-4 fw-bold">Faça o Login</h5>
                         </div>
                         <div class="card-body">
-                            <form class="row g-1" action="{{ route('login.auth') }}" method="POST">
+                            <form class="row g-1" action="{{route('login.auth') }}" method="POST">
                                 @csrf
                                 <div class="col-md-12 mb-2">
                                     <label for="email" class="form-label  mb-0">E-mail</label>

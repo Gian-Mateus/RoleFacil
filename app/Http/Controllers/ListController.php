@@ -18,7 +18,7 @@ class ListController extends Controller
             $c["cli_establishment_seed_imgs"] = explode(";", $c["cli_establishment_seed_imgs"]);
         };
 
-        return  view("list", ["cli" => $cli]);
+        return  view("list", ["cli" => $cli, 'category' => $list]);
         
     }
 
