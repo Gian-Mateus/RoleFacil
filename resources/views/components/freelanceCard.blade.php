@@ -1,5 +1,5 @@
 <div class="card" >
-    <img src="https://t.ctcdn.com.br/uTUyqTnv5XqBEX6kUh2dyEFmxJs=/1200x675/smart/i556613.jpeg" class="card-img-top" alt="...">
+    <img src="https://clubedobarman.com/wp-content/uploads/2020/03/Depositphotos_185257888_l-2015-e1585158518691.jpg" class="card-img-top" alt="...">
     <div class="card-body">
         <h5 class="card-title">{{ $title }}</h5>
         <p class="card-text">{{ $title }}</p>

@@ -45,8 +45,8 @@
 @section('content')
 
 <div class="col-12 text-center titlehome">
-    <h1>Aqui você encontra o melhor rolê, feito para você</h1>
-    <h2>Do jeitinho que você gosta</h2>
+    <h1>Aqui você encontra o melhor rolê, feito para você!</h1>
+    <h2>Do jeitinho que você gosta!</h2>
 </div>
 
 <x-filters.offcanvas/>
