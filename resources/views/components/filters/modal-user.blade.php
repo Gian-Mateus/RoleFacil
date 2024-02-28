@@ -1,5 +1,5 @@
 <div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" required>
   <label class="form-check-label" for="flexCheckDefault">
     <a href="#" data-bs-toggle="modal" data-bs-target="#modal2">Política de Privacidade</a>
   </label>

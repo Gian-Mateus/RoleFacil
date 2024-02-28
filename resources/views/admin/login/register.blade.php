@@ -9,6 +9,11 @@
 </head>
 <body>
     <main>
+      @if(session()->has('msg'))
+            <div class="alert alert-success">
+                {{ session()->get('msg') }}
+            </div>
+      @endif
         <div class="container vh-100">
             <div class="row justify-content-center align-items-center h-100">
                 <div class="container d-flex justify-content-center">
@@ -26,7 +31,7 @@
                                 @csrf
                                 <div class="col-md-12 mb-2">
                                   <label for="email" class="form-label mb-0">Email</label>
-                                  <input type="text" class="form-control" name="email" id="email" autofocus required>
+                                  <input type="email" class="form-control" name="email" id="email" autofocus required>
                                   <i class="fa fa-user text-danger"></i>
                                 </div>
 
@@ -49,13 +54,13 @@
                                   <label for="cnpj" class="form-label mb-0">Cnpj</label>
                                   <input type="text" class="form-control" name="cnpj" id="cnpj" required>
                                 </div>
-                                <div class="col-md-6 text-start">
-                                  <x-filters.modal-privacy/>
+                                <div class="col-md-6 text-start"> {{-- politicas de privacidade --}}
+                                  <x-filters.modal-privacy/> 
                                 </div>
                                 <div class="col-md-6 text-start"> {{-- termos de uso --}}
                                   <x-filters.modal-user/>
                                 </div>
-                                <div class="col-12 mb-3"> {{-- politicas de privacidade --}}
+                                <div class="col-12 mb-3">
                                   <button type="submit" class="btn btn-primary w-100 fs-5 fw-bold icon-link-hover">Registrar-se</button>
                                 </div>
                                 <div class="col-md-12 text-center mb-3">
