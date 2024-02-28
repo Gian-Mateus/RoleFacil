@@ -4,7 +4,7 @@
 
     @foreach ($cli as $c)
         @component('components.card-list', [
-        // "title" =>  $c["cli_establishment_seed_name"], 
+        "title" =>  $c["cli_establishment_seed_name"], 
         "text" => $c["cli_establishment_seed_address_formatted"],
         "img" => $c["cli_establishment_seed_imgs"][0],
         "establishment" => $c["cli_establishment_seed_id"]

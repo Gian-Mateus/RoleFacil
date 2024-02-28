@@ -16,8 +16,9 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
 
         $this->call([
-            CliEstablishmentSeedSeeder::class,
-            CategoriesSeed::class,
+            // CliEstablishmentSeedSeeder::class,
+            // CategoriesSeed::class,
+            // FreelanceSeeder::class,
         ]);
     }
 }

@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Lang;
 class HomeController extends Controller
 {
     public function index() {
-        $imgsToHome = "assets/images_to_home/559.jpg;assets/images_to_home/14410.jpg;assets/images_to_home/30650.jpg;";
+        $imgsToHome = "assets/images_to_home/559.jpg;assets/images_to_home/14410.jpg;assets/images_to_home/30650.jpg";
 
         $categories = "Estabelecimento;Restaurante;Cafeteria;Padaria;Supermercado;Farmácia;Comida;Ponto de Interesse;Loja;Atração Turística";
 

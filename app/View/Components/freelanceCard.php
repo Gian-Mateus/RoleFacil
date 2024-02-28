@@ -2,19 +2,28 @@
 
 namespace App\View\Components;
 
+use Closure;
+use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
-use App\Models\Freelancer;
 
 class FreelanceCard extends Component
 {
-    public function __construct()
+    public function __construct(
+        public $title,
+        public $description,
+        public $start,
+        public $end,
+        public $money,
+        public $telefoneFixo,
+        public $phone,
+        public $email,
+    )
     {
         //
     }
 
-    public function render()
+    public function render(): View|Closure|string
     {
-        $freelancers = Freelancer::all();
-        return view('components.freelanceCard', ['freelancers' => $freelancers]);
+        return view('components.freelanceCard');
     }
 }

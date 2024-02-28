@@ -11,9 +11,10 @@ class FreelancerController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Freelancer $freelancers)
     {
-        return view('freelancer');
+        $freelancers::all()->toArray();
+        return view('freelancer', ['freelancers' => $freelancers]);
     }
 
     /**
