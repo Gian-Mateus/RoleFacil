@@ -34,14 +34,38 @@ class RegisterController extends Controller
         // $lat = $caminho4->lat;
         // $lng = $caminho4->lng;
 
-        $user = new User;
+        if(!(($request->password != $request->repeatpassword) OR (strlen($request->cnpj) != 14))) {
+            $user = User::where('email', '=', $request->email)->first();
+            if(!$user) {
+                $user = User::where('user_cnpj', '=', $request->cnpj)->first();
+                if(!$user) {
+                    $user = new User;
 
-        $user->email = $request->email;
-        $user->password = bcrypt($request->password);
-        $user->user_name = $request->name;
-        $user->user_cnpj = $request->cnpj;
+                    $user->email = $request->email;
+                    $user->password = bcrypt($request->password);
+                    $user->user_name = $request->name;
+                    $user->user_cnpj = $request->cnpj;
+            
+                    $user->save();
 
-        $user->save();
-        return redirect('login')->with('msg', 'Usuário registrado com sucesso!');
+                    return redirect('login')->with('msg', 'Usuário registrado com sucesso!');                    
+                } else {
+                    return redirect('register')->with('msg', 'Usuário com esse cnpj já está cadastrado');
+                }
+            } else {
+                return redirect('register')->with('msg', 'Usuário com esse email já existe no banco');
+            }
+        } else {
+            return redirect('register')->with('msg', 'Deu pau');
+        }
+             // $user = new User;
+    
+            // $user->email = $request->email;
+            // $user->password = bcrypt($request->password);
+            // $user->user_name = $request->name;
+            // $user->user_cnpj = $request->cnpj;
+    
+            // $user->save();
+        //return redirect('login')->with('msg', 'Usuário registrado com sucesso!');
     }
 }
