@@ -22,7 +22,7 @@
                             <h5 class="card-title fs-4 fw-bold">Crie sua conta!</h5>
                         </div>
                         <div class="card-body p-4">
-                            <form class="row" action="{{route('login.register')}}" method="POST" id='form_test'>
+                            <form class="row" action="{{route('login.register')}}" method="POST">
                                 @csrf
                                 <div class="col-md-12 mb-2">
                                   <label for="email" class="form-label mb-0">Email</label>

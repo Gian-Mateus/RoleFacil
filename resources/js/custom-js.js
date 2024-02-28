@@ -13,64 +13,46 @@ document.getElementById('input-range-distance').addEventListener('input', syncIn
 document.getElementById('range-distance').addEventListener('input', syncInputs)
 
 
-function validarCNPJ(cnpj) {
-// Remover caracteres especiais
-cnpj = cnpj.replace(/[^\d]+/g, '');
+/* document.getElementById('form_test').addEventListener('submit', function(event) {
+        var password = document.getElementById('password').value;
+        var confirmPassword = document.getElementById('repeatpassword').value;
+        var cnpj = document.getElementById('cnpj').value;
+        
+        // Validação do e-mail
+        var email = document.getElementById('email').value;
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            event.preventDefault();
+            alert('Por favor, insira um endereço de e-mail válido.');
+            return false;
+        }
 
-// Validar tamanho
-if (cnpj.length !== 14) {
-return false;
-}
+        // Validação da senha
+        if (password.length < 6) {
+            event.preventDefault();
+            alert('A senha deve ter pelo menos 6 caracteres.');
+            return false;
+        }
 
-// Algoritmo de validação
-// ... (implementar algoritmo de validação de CNPJ)
+        // Confirmação de senha
+        if (password !== repeatpassword) {
+            event.preventDefault();
+            alert('As senhas não coincidem.');
+            return false;
+        }
 
-// Retornar resultado da validação
-return true;
-}
+        // Validação do CNPJ
+        if (!validarCNPJ(cnpj)) {
+            event.preventDefault();
+            alert('Por favor, insira um CNPJ válido.');
+            return false;
+        }
 
-const cnpjInput = document.getElementById('cnpj');
+        return true;
+    });
 
-cnpjInput.addEventListener('submit', function() {
-  const cnpj = this.value;
-  const isValid = validarCNPJ(cnpj);
-
-  // Atualizar feedback visual
-  if (isValid) {
-    // CNPJ válido
-    cnpjInput.classList.remove('invalid');
-    cnpjInput.classList.add('valid');
-  } else {
-    // CNPJ inválido
-    cnpjInput.classList.add('invalid');
-    cnpjInput.classList.remove('valid');
-  }
-});
-
-function calcularDigitoVerificador(digitos) {
-    let soma = 0;
-    let peso = 2;
-    for (let i = digitos.length - 1; i >= 0; i--) {
-      soma += digitos[i] * peso;
-      peso = peso === 9 ? 2 : peso + 1;
-    }
-    const resto = soma % 11;
-    return resto === 0 || resto === 1 ? 0 : 11 - resto;
-  }
-  
-  function validarCNPJ(cnpj) {
-    // ... (extrair dígitos verificadores)
-  
-    const digitoVerificador1 = calcularDigitoVerificador(digitos.slice(0, 12));
-    const digitoVerificador2 = calcularDigitoVerificador(digitos.slice(0, 13));
-  
-    return digitoVerificador1 === digitos[12] && digitoVerificador2 === digitos[13];
-  }
-
-  /* Aqui inflencia no email de cadastro */
-  function isEmailValid(email){
-
-        const emailRegex = new RegExp(
-            /^[a-zA-Z0-9._-]/
-        )
-  }
+    // Função para validar CNPJ
+    function validarCNPJ(cnpj) {
+        // Implemente aqui a lógica de validação do CNPJ
+        return true; // Por enquanto, retornamos true para fins de exemplo
+    } */
