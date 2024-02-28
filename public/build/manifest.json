@@ -1,0 +1,16 @@
+{
+  "assets/assets-svg/background-role-facil.png": {
+    "file": "assets/background-role-facil-n0VWn_l6.png",
+    "src": "assets/assets-svg/background-role-facil.png"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-8oNjaZfK.js",
+    "isEntry": true,
+    "src": "resources/js/app.js"
+  },
+  "resources/sass/app.scss": {
+    "file": "assets/app-gjmMXofK.css",
+    "isEntry": true,
+    "src": "resources/sass/app.scss"
+  }
+}
