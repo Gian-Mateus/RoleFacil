@@ -18,7 +18,7 @@
             <div class="row justify-content-center align-items-center h-100">
                 <div class="container d-flex justify-content-center">
                     <a class="navbar-brand" href="/">
-                        <x-svg.logo width="10rem" height="10rem"/>
+                        <x-svg.logo width="20rem" height="20rem"/>
                     </a>
                 </div>
                 <div class="col col-sm-12 col-md-6">
@@ -55,7 +55,7 @@
                                   <input type="text" class="form-control" name="cnpj" id="cnpj" required>
                                 </div>
                                 <div class="col-md-6 text-start"> {{-- politicas de privacidade --}}
-                                  <x-filters.modal-privacy/> 
+                                  <x-filters.modal-privacy/>
                                 </div>
                                 <div class="col-md-6 text-start"> {{-- termos de uso --}}
                                   <x-filters.modal-user/>
