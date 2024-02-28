@@ -13,7 +13,7 @@ class FreelancerController extends Controller
      */
     public function index(Freelancer $freelancers)
     {
-        $freelancers::all()->toArray();
+        $freelancers = Freelancer::all()->toArray();
         return view('freelancer', ['freelancers' => $freelancers]);
     }
 

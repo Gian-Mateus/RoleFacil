@@ -106,25 +106,23 @@
                 <div class="col-sm-12 col-md-9 freelancebox">
 
                     <x-freelanceList aboutWhat="Bartender">
-                      @if(empty($freelancers))
-                      @foreach ($freelancers as $freelancer)
-                      @component('components.freelanceCard', [
-                          'title' => $freelancer['freelancer_title'],
-                          'description' => $freelancer['freelancer_description'],
-                          'start' => $freelancer['freelancer_start'],
-                          'end' => $freelancer['freelancer_end'],
-                          'money' => $freelancer['freelancer_money'],
-                          'phone' => $freelancer['freelancer_phone'],
-                          'telefoneFixo' => $freelancer['freelancer_telefone_fixo'],
-                          'email' => $freelancer['freelancer_email'],
+                        @forelse ($freelancers as $fre)
+                          @component('components.freelanceCard', [
+                            'title' => $fre['freelancer_title'],
+                            'description' => $fre['freelancer_description'],
+                            'start' => $fre['freelancer_start'],
+                            'end' => $fre['freelancer_end'],
+                            'money' => $fre['freelancer_money'],
+                            'phone' => $fre['freelancer_phone'],
+                            'telefoneFixo' => $fre['freelancer_telefone_fixo'],
+                            'email' => $fre['freelancer_email']
                           ])
-                      @endcomponent
-                      @endforeach
-                      @else
-                        <div class="row my-30">
-                          <h2>Nenhum serviço encontrado</h2>
-                        </div>
-                      @endif
+                          @endcomponent
+                        @empty
+                          <div class="row my-30">
+                            <h2>Nenhum serviço encontrado</h2>
+                          </div>
+                        @endforelse
                     </x-freelanceList>
 
                       {{-- repetir a ideia do componente acima para os outros tipos de serviços --}}
