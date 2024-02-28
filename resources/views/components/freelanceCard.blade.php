@@ -20,9 +20,9 @@
         </div>
         <div class="modal-body fs-3">
             <p>{{$freelancer['freelancer_description']}}</p>
-            <p>{{$freelancer['freelancer_start']}} até {{$freelancer['freelancer_end']}}</p> 
+            <p>Horários: {{$freelancer['freelancer_start']}}h até {{$freelancer['freelancer_end']}}h</p> 
             @if($freelancer['freelancer_money'])      
-            <p>R${{$freelancer['freelancer_money']}} por hora</p>
+            <p>Pagamento: R${{$freelancer['freelancer_money']}} por hora</p>
             @else
             <p>Valor a combinar.</p>
             @endif
