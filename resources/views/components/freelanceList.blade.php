@@ -4,8 +4,8 @@
         
     </div>
     <div class="row-col cards-freelance">
-        @for ($i = 0; $i < 10; $i++)
-        <x-freelanceCard/>
-        @endfor
+
+        {{ $slot }}
+
     </div>
 </div> 

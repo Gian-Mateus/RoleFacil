@@ -14,14 +14,14 @@ class freelanceList extends Component
     
     public function __construct(
         public string $aboutWhat,
-        public array $pathtimg
+        // public array $pathtimg
     )
     {
-        $this->pathtimg = [
+        /* $this->pathtimg = [
             "teste1",
             "teste2",
             "teste3",
-        ];
+        ]; */
     }
 
     /**

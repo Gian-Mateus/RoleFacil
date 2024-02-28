@@ -1,6 +1,6 @@
 @extends('layout')
 @section('content')
-<x-breadcrumb title="Freelancer"/>
+<x-breadcrumb routeLinks="Freelancer"/>
         <div class="text-center">
           <h2 class="fw-medium fs-1 titulo">Lista de Freelances</h2>
           <h3>Encontre aqui uma oportunidade de Freelance que se encaixe com seu perfil!</h3>
@@ -104,10 +104,30 @@
 
                 {{-- display de lista --}}
                 <div class="col-sm-12 col-md-9 freelancebox">
-                    <x-freelanceList aboutWhat="Bartender"/>
-                    <x-freelanceList aboutWhat="Garçom"/>
-                    <x-freelanceList aboutWhat="Atendimento"/>
-                    <x-freelanceList aboutWhat="Limpeza"/>
+
+                    <x-freelanceList aboutWhat="Bartender">
+                      @if(empty($freelancers))
+                      @foreach ($freelancers as $freelancer)
+                      @component('components.freelanceCard', [
+                          'title' => $freelancer['freelancer_title'],
+                          'description' => $freelancer['freelancer_description'],
+                          'start' => $freelancer['freelancer_start'],
+                          'end' => $freelancer['freelancer_end'],
+                          'money' => $freelancer['freelancer_money'],
+                          'phone' => $freelancer['freelancer_phone'],
+                          'telefoneFixo' => $freelancer['freelancer_telefone_fixo'],
+                          'email' => $freelancer['freelancer_email'],
+                          ])
+                      @endcomponent
+                      @endforeach
+                      @else
+                        <div class="row my-30">
+                          <h2>Nenhum serviço encontrado</h2>
+                        </div>
+                      @endif
+                    </x-freelanceList>
+
+                      {{-- repetir a ideia do componente acima para os outros tipos de serviços --}}
                 </div>
             </div>
         </div>
