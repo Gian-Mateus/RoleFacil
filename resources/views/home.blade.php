@@ -57,15 +57,16 @@
     </div>
     @enddesktop
     <div class="content-carousel col-md-8">
-        <x-carousel idCarousel="carousel-Home" />
+        <x-carousel idCarousel="carousel-Home" imgs="{{ $imgsToHome }}"/>
     </div>
 </div>
 
 <div class="event-list-cards row">
 
-    <x-eventListCard aboutWhat="Estabelecimentos" link="{{ route('estabelecimentos') }}">
+    <x-eventListCard aboutWhat="Estabelecimentos" link="padarias">
         @foreach( $establishment as $estab )
             @component('components.card', [
+                'establishment' => $estab['cli_establishment_seed_id'],
                 'img' => $estab["cli_establishment_seed_imgs"][0],
                 'title' => $estab["cli_establishment_seed_name"],
                 'text' => $estab["cli_establishment_seed_address_formatted"]
@@ -74,9 +75,10 @@
         @endforeach
     </x-eventListCard>
 
-    <x-eventListCard aboutWhat="Restaurantes" link="{{ route('whatever') }}">
+    <x-eventListCard aboutWhat="Restaurantes" link="restaurantes">
         @foreach ($restaurants as $rest)
             @component('components.card', [
+                'establishment' => $rest['cli_establishment_seed_id'],
                 "img" => $rest["cli_establishment_seed_imgs"][0],
                 'title' => $rest["cli_establishment_seed_name"],
                 'text' => $rest["cli_establishment_seed_address_formatted"]
@@ -85,9 +87,10 @@
         @endforeach
     </x-eventListCard>
 
-    <x-eventListCard aboutWhat="Bares" link="1">
+    <x-eventListCard aboutWhat="Bares" link="bares">
         @foreach ($bar as $b)
             @component('components.card', [
+                'establishment' => $b['cli_establishment_seed_id'],
                 "img" => $b["cli_establishment_seed_imgs"][0],
                 'title' => $b["cli_establishment_seed_name"],
                 'text' => $b["cli_establishment_seed_address_formatted"]
@@ -96,9 +99,10 @@
         @endforeach
     </x-eventListCard>
 
-    <x-eventListCard aboutWhat="Padarias" link="1">
+    <x-eventListCard aboutWhat="Padarias" link="padarias">
         @foreach ($bakery as $bak)
             @component('components.card', [
+                'establishment' => $bak['cli_establishment_seed_id'],
                 "img" => $bak["cli_establishment_seed_imgs"][0],
                 'title' => $bak["cli_establishment_seed_name"],
                 'text' => $bak["cli_establishment_seed_address_formatted"]

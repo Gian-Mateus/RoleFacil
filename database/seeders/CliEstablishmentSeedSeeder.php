@@ -51,6 +51,7 @@ class CliEstablishmentSeedSeeder extends Seeder
         foreach ($clients["results"] as $cli) {
             CliEstablishmentSeed::updateOrCreate([
                 'cli_establishment_seed_name' => isset($cli["name"]) ? $cli["name"] : "",
+                'cli_establishment_seed_zipcode' => isset($cli["address_components"]["postal_code"]) ? $cli["address_components"]["postal_code"] : "",
                 'cli_establishment_seed_address' => isset($cli["address_components"]["route"]) ? $cli["address_components"]["route"] : "",
                 'cli_establishment_seed_address_formatted' => isset($cli["formatted_address"]) ? $cli["formatted_address"] : "",
                 'cli_establishment_seed_phone' => isset($cli["international_phone_number"]) ? str_replace([' ', '-', '+'], '', $cli["international_phone_number"]) : "",
@@ -59,6 +60,7 @@ class CliEstablishmentSeedSeeder extends Seeder
                 'cli_establishment_seed_city' => isset($cli["address_components"]["administrative_area_level_2"]) ? $cli["address_components"]["administrative_area_level_2"] : "",
                 'cli_establishment_seed_neighborhood' => isset($cli["address_components"]["sublocality_level_1"]) ? $cli["address_components"]["sublocality_level_1"] : "",
                 'cli_establishment_seed_uf' => isset($cli["address_components"]["administrative_area_level_1"]) ? $cli["address_components"]["administrative_area_level_1"] : "",
+                'cli_establishment_seed_gmap' => isset($cli["url"]) ? $cli["url"] : "",
                 'cli_establishment_seed_lat' => isset($cli["geometry"]["location"]["lat"]) ? $cli["geometry"]["location"]["lat"] : "",
                 'cli_establishment_seed_lng' => isset($cli["geometry"]["location"]["lng"]) ? $cli["geometry"]["location"]["lng"] : "",
                 'cli_establishment_seed_categories' => isset($cli["types"]) ? implode(';', $cli["types"]) : "",

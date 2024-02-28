@@ -1,6 +1,6 @@
 @extends('layout')
 @section( 'content' )
-<x-breadcrumb title="Meu ovo esquerdo" />
+<x-breadcrumb title="Teste"/>
 <div class="content-main">
     <div class="mt-2 title">
         <h2 class="fw-medium text-center fs-1">Casa de aborto Criança Feliz</h2>

@@ -5,8 +5,10 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\admin\LoginController;
+use App\Http\Controllers\EstablishmentController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\FreelancerController;
+use App\Http\Controllers\ListController;
 use Illuminate\Auth\Events\Login;
 
 /* Rotas para login e registro */
@@ -41,16 +43,14 @@ Route::middleware("validaLogin")->group(function(){
 
 Route::get('/events', [EventController::class, 'index']);
 
-/* Rotas para estilização e criação das views */
+/* Rotas Acessos comuns */
 
-Route::get('/estabelecimentos', function () {
-    return view("list");
-})->name("estabelecimentos");
+Route::get('/role/{establishment:cli_establishment_seed_id}', [EstablishmentController::class, 'show'])->name("role");
 
-// Route::get('/{whatever?}', function () {
-//     return view("list");
-// })->name("whatever");
+Route::get('/list/{list}', [ListController::class, 'show'])->name("list");
+Route::get('/roles', [ListController::class, 'all'])->name("roles");
 
+/* Fim dos Acessos comuns */
 Route::get('/evento', function () {
     return view("event");
 });

@@ -58,6 +58,7 @@ $nav-tabs-link-active-bg: $orange-600;
 @import "establishmentAndEvents.scss";
 @import "breadcrumb.scss";
 @import 'cadastro';
+@import 'cardlist.scss';
 
 @import "bootstrap/scss/maps";
 @import "bootstrap/scss/mixins";
@@ -108,9 +109,6 @@ body{
 .carousel, .accordion{
     box-shadow: 15px 15px 35px rgb(16, 16, 16);
 }
-.carouse-inner{
-    
-}
 
 
 // input[type="date"]:in-range::-webkit-datetime-edit-year-field,
@@ -122,7 +120,7 @@ body{
 input[type="date"]::-webkit-calendar-picker-indicator {
     cursor: pointer;
     filter: invert(0.8) brightness(50%) sepia(100%) saturate(10000%) hue-rotate(240deg);
-  }
+}
 @media screen and (max-width: 768px){
     .content-accordion{
         width: 0 !important;

@@ -25,6 +25,10 @@
         }
         .ctg-ht{
             grid-area: cth;
+            .row-categories{
+                display: flex;
+                flex-direction: column !important;
+            }
         }
         .content-carousel{
             grid-area: img;
@@ -49,7 +53,8 @@
     .content-main{
         display: grid;
         grid-template-areas: 
-            'ttl ttl ttl ttl cth cth'
+            'ttl ttl ttl ttl ttl ttl'
+            'cth cth cth cth cth cth'
             'img img img img img img'
             'pfl pfl pfl inf inf inf'
             'adr adr adr adr adr adr'
@@ -64,6 +69,11 @@
         }
         .ctg-ht{
             grid-area: cth;
+            .row-categories{
+                display: flex;
+                flex-direction: row !important;
+                justify-content: space-around;
+            }
         }
         .content-carousel{
             grid-area: img;

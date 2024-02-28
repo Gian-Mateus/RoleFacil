@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-xl">
     <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="{{ route('home') }}">
             <x-svg.logo width="6rem" height="6rem"/>
         </a>
         <form class="d-flex form-search" role="search">
@@ -26,7 +26,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/estabelecimento">
+                <a class="nav-link" href="{{ route('roles') }}">
                     <div class="icon">
                         <x-svg.roles/>
                     </div>

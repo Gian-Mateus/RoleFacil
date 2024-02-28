@@ -14,8 +14,8 @@
             </h2>
             <div>
                 <div class="accordion-body">
-                    <input type="number" placeholder="50" id="input-range-distance" name="input-range-distance" class="input-range">
-                    <input type="range" min="1" max="150" value="50" name="range_distance" id="range-distance">
+                    <input type="number" placeholder="50" class="input-range input-range-number">
+                    <input type="range" min="1" max="150" value="50" class="input-range-range">
                 </div>
             </div>
         </div>
@@ -29,18 +29,9 @@
             <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFilter">
                 <div class="accordion-body">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="bar">
-                        <label class="form-check-label" for="bar">
-                            Bar
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="bar">
-                        <label class="form-check-label" for="bar">
-                            Bar
-                        </label>
-                    </div>
-                    <div class="form-check">
+                        @php
+                            
+                        @endphp
                         <input class="form-check-input" type="checkbox" value="" id="bar">
                         <label class="form-check-label" for="bar">
                             Bar

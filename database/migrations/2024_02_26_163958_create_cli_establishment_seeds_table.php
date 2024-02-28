@@ -28,6 +28,7 @@ return new class extends Migration
             $table->string('cli_establishment_seed_lng', 20)->nullable();
             $table->text('cli_establishment_seed_categories')->nullable();
             $table->text('cli_establishment_seed_operation')->nullable();
+            $table->text('cli_establishment_seed_gmap')->nullable();
             $table->text('cli_establishment_seed_imgs')->nullable();
             $table->text('cli_establishment_seed_link_instagram')->nullable();
             $table->text('cli_establishment_seed_link_website')->nullable();
