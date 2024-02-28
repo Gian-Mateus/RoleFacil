@@ -22,21 +22,7 @@ class User extends Authenticatable
         'email',
         'password',
         'user_name',
-        'user_cnpj',
-        'user_description',
-        'user_zipcode',
-        'user_complement',
-        'user_address',
-        'user_number_address',
-        'user_city',
-        'user_neighborhood',
-        'user_uf',
-        'user_latitude',
-        'user_longitude',
-        'user_facebook_link',
-        'user_instagram_link',
-        'user_celular',
-        'user_telefone_fixo',
+        'user_cnpj'
     ];
 
     /**
