@@ -22,7 +22,7 @@ class FreelancerController extends Controller
      */
     public function create()
     {
-        $users = User::all();
+        //
     }
 
     /**

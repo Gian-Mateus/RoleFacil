@@ -39,6 +39,9 @@ Route::middleware("validaLogin")->group(function(){
     Route::post('/events', [EventController::class, 'store']);
     Route::put('/events/update/{id}', [EventController::class, 'update']);
     Route::delete('/events/{id}', [EventController::class, 'destroy']);
+    Route::get('/cliente', function () {
+        return view("client");
+    });
     
 });
 
@@ -61,6 +64,3 @@ Route::get('/evento', function () {
 
 /* Rota para login e registro */
 
-Route::get('/client', function () {
-    return view("client");
-});
