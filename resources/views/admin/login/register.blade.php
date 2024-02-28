@@ -22,20 +22,25 @@
                             <h5 class="card-title fs-4 fw-bold">Crie sua conta!</h5>
                         </div>
                         <div class="card-body p-4">
-                            <form class="row" action="{{route('login.register')}}" method="POST">
+                            <form class="row" action="{{route('login.register')}}" method="POST" id='form_test'>
                                 @csrf
                                 <div class="col-md-12 mb-2">
                                   <label for="email" class="form-label mb-0">Email</label>
                                   <input type="text" class="form-control" name="email" id="email" autofocus required>
+                                  <i class="fa fa-user text-danger"></i>
                                 </div>
-                                <div class="col-md-12 mb-2">
+
+                              {{-- Aqui será para criar a senha da empresa --}}
+                                <div class="col-md-6 mb-2">
                                   <label for="password" class="form-label mb-0">Senha</label>
                                   <input type="password" class="form-control" name="password" id="password" autofocus required>
                                 </div>
-                                <div class="col-md-12 mb-2">
+                                <div class="col-md-6 mb-2">
                                   <label for="repeatpassword" class="form-label mb-0">Repetir senha</label>
                                   <input type="password" class="form-control" name="repeatpassword" id="repeatpassword" autofocus required>
                                 </div>
+
+                                {{-- Nome da empresa --}}
                                 <div class="col-md-12 mb-2">
                                   <label for="name" class="form-label mb-0">Nome</label>
                                   <input type="text" class="form-control" name="name" id="name" autofocus required>
