@@ -51,16 +51,12 @@
                     </a>
                 </li>
                 @if (Auth::user())
-                    @php 
-                    $user_name = Auth::user()->user_name;
-                    echo $user_name;
-                    @endphp
                     <li class="nav-item">
-                        <a class="nav-link" href="/login">
+                        <a class="nav-link" href="/cliente">
                             <div class="icon">
                                 <x-svg.login/>
                             </div>
-                            <h4>{{ $user_name }}</h4>
+                            <h4>{{ Auth::user()->user_name }}</h4>
                         </a>
                     </li>
                 <li class="nav-item">
